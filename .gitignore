@@ -6,5 +6,8 @@ node_modules
 # WordPress Specific
 debug.log
 
+# Local Environment
+.DS_Store
+
 # Custom
 report-*

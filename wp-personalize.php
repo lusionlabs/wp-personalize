@@ -209,7 +209,7 @@ function wppUpdateScript() {
 		);
 
 		$result = update_option( 'wp_personalize_script_arr', $scriptSiteArr );
-	}
+	}//end if
 
 	if ( $result ) {
 		echo json_encode( array( 'result' => 'true' ) );
@@ -339,8 +339,8 @@ function handleScripts( $scriptArr ) {
 				break;
 			default:
 				// Do nothing
-		}
-	}
+		}//end switch
+	}//end foreach
 }
 
 
