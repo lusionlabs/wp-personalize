@@ -11,6 +11,8 @@ notifications:
 branches:
   only:
     - master
+    - develop
+    - fix/wordpress-coding-standards
 
 cache:
   directories:
