@@ -14,9 +14,9 @@
 
 /**
  * @package   WP Personalize
- * @author    Ecalon IT LTD.
+ * @author    Lusion Labs
  * @version   2.1.0
- * @copyright Ecalon IT LTD.
+ * @copyright Lusion Labs
  */
 
 // Constants
