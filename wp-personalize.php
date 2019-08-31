@@ -1,36 +1,21 @@
 <?php
 /**
- * Plugin Name: WP Personalize
- * Donate Link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5GB537F64NUDE
- * Plugin URI: http://wordpress.org/plugins/wp-personalize/
- * Version: 2.1.0
- * Author: Ecalon IT LTD.
- * Author URI: http://www.ecalon.it/
- * Description: Personalize and customize your WordPress single site or multisite (for the entire network or individual sites).
- * License: GPL2
+ * Plugin Name:     WP Personalize
+ * Plugin URI:      http://wordpress.org/plugins/wp-personalize/
+ * Description:     Personalize and customize your WordPress single site or multisite (for the entire network or individual sites).
+ * Author:          Lusion Labs
+ * Author URI:      https://wppersonalize.com
+ * Text Domain:     wp-personalize
+ * Domain Path:     /languages
+ * Version:         2.2.0
+ *
+ * @package         WP_Personalize
  */
 
-/*
-  Copyright 2015 WP Personalize (email : info@ecalon.it)
-
-	This program is free software; you can redistribute it and/or modify
-	it under the terms of the GNU General Public License, version 2, as
-	published by the Free Software Foundation.
-
-	This program is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
-
-	You should have received a copy of the GNU General Public License
-	along with this program; if not, write to the Free Software
-	Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
-*/
-
 /**
- * @package WP Personalize
- * @author Ecalon IT LTD.
- * @version 2.1.0
+ * @package   WP Personalize
+ * @author    Ecalon IT LTD.
+ * @version   2.1.0
  * @copyright Ecalon IT LTD.
  */
 

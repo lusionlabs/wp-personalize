@@ -1,12 +1,13 @@
 === WP Personalize ===
-Contributors: Ecalon IT LTD.
-Donate Link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5GB537F64NUDE
-Tags: personalize,custom,html,js,javascript,css,php,multisite,single,site
-Requires at least: 3.0
-Tested up to: 4.2.1
-Stable tag: 2.1.0
+Contributors: lusionlabs
+Donate link: https://lusionlabs.com/
+Tags: personalize, custom, html, js, javascript, css, php, multisite, single, site
+Requires at least: 4.5
+Tested up to: 5.2
+Requires PHP: 5.6
+Stable tag: trunk
 License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
@@ -38,7 +39,7 @@ This plugin is for people with some level of knowledge for HTML, CSS, Javascript
 
 = Plugin doesn't work =
 
-Please specify and provide as much information as you can to help us debug the problem. 
+Please specify and provide as much information as you can to help us debug the problem.
 Also please send us screenshots of any errors you are receiving.
 
 == Changelog ==
