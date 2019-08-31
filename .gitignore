@@ -1,13 +1,18 @@
 # Build Tools
 composer.lock
 vendor
-node_modules
 
-# WordPress Specific
-debug.log
-
-# Local Environment
+# From WP-CLI 'plugin scaffold'
 .DS_Store
+phpcs.xml
+phpunit.xml
+Thumbs.db
+wp-cli.local.yml
+node_modules/
+*.sql
+*.tar.gz
+*.zip
 
 # Custom
+debug.log
 report-*
