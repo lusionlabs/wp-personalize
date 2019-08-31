@@ -1,0 +1,10 @@
+# Build Tools
+composer.lock
+vendor
+node_modules
+
+# WordPress Specific
+debug.log
+
+# Custom
+report-*
