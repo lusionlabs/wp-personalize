@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/lusionlabs/wp-personalize.svg?branch=develop)](https://travis-ci.com/lusionlabs/wp-personalize)
 # WP Personalize
 
 ## Description
