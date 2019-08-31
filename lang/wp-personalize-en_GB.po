@@ -1,0 +1,1461 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Ecalon IT LTD.\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-04-07 17:22+0100\n"
+"PO-Revision-Date: 2015-04-07 17:23+0100\n"
+"Last-Translator: \n"
+"Language-Team: Development <info@ecalon.it>\n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 1.7.5\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../inc/networkOptionsPage.php:3 ../inc/networkOptionsPage.php:5
+msgid "Network"
+msgstr "Network"
+
+#: ../inc/networkOptionsPage.php:4
+msgid "Single Site Settings"
+msgstr "Single Site Settings"
+
+#: ../inc/networkOptionsPage.php:8 ../inc/optionsPage.php:7
+msgid "Info"
+msgstr "Info"
+
+#: ../inc/networkOptionsPage.php:25
+msgid "Settings"
+msgstr "Settings"
+
+#: ../inc/networkOptionsPage.php:31
+msgid "Locations Choosable"
+msgstr "Locations Choosable"
+
+#: ../inc/networkOptionsPage.php:43
+msgid "Types Choosable"
+msgstr "Types Choosable"
+
+#: ../inc/networkOptionsPage.php:55
+msgid "Areas Choosable"
+msgstr "Areas Choosable"
+
+#: ../inc/networkOptionsPage.php:71 ../inc/wpPersonlizeEditor.php:512
+msgid "Update"
+msgstr "Update"
+
+#: ../inc/wpPersonlizeEditor.php:61
+msgid "Load"
+msgstr "Load"
+
+#: ../inc/wpPersonlizeEditor.php:64
+msgid "Delete"
+msgstr "Delete"
+
+#: ../inc/wpPersonlizeEditor.php:202 ../inc/wpPersonlizeEditor.php:270
+#: ../inc/wpPersonlizeEditor.php:304 ../inc/wpPersonlizeEditor.php:338
+#: ../inc/wpPersonlizeEditor.php:372
+msgid "You haven't saved your changes, proceed?"
+msgstr "You haven't saved your changes, proceed?"
+
+#: ../inc/wpPersonlizeEditor.php:208 ../inc/wpPersonlizeEditor.php:234
+#: ../inc/wpPersonlizeEditor.php:276 ../inc/wpPersonlizeEditor.php:310
+#: ../inc/wpPersonlizeEditor.php:344 ../inc/wpPersonlizeEditor.php:378
+msgid "Yes"
+msgstr "Yes"
+
+#: ../inc/wpPersonlizeEditor.php:212 ../inc/wpPersonlizeEditor.php:257
+#: ../inc/wpPersonlizeEditor.php:284 ../inc/wpPersonlizeEditor.php:318
+#: ../inc/wpPersonlizeEditor.php:352 ../inc/wpPersonlizeEditor.php:386
+msgid "No"
+msgstr "No"
+
+#: ../inc/wpPersonlizeEditor.php:228
+msgid "Are you sure?"
+msgstr "Are you sure?"
+
+#: ../inc/wpPersonlizeEditor.php:409
+msgid "Control Panel"
+msgstr "Control Panel"
+
+#: ../inc/wpPersonlizeEditor.php:422
+msgid "Script Title"
+msgstr "Script Title"
+
+#: ../inc/wpPersonlizeEditor.php:423 ../inc/wpPersonlizeEditor.php:482
+msgid "Location"
+msgstr "Location"
+
+#: ../inc/wpPersonlizeEditor.php:424 ../inc/wpPersonlizeEditor.php:492
+msgid "Type"
+msgstr "Type"
+
+#: ../inc/wpPersonlizeEditor.php:425 ../inc/wpPersonlizeEditor.php:502
+msgid "Area"
+msgstr "Area"
+
+#: ../inc/wpPersonlizeEditor.php:426
+msgid "Action"
+msgstr "Action"
+
+#: ../inc/wpPersonlizeEditor.php:432
+msgid "No Scripts"
+msgstr "No Scripts"
+
+#: ../inc/wpPersonlizeEditor.php:448
+msgid "Create new"
+msgstr "Create new"
+
+#: ../inc/wpPersonlizeEditor.php:450 ../wp-personalize.php:50
+msgid "HTML"
+msgstr "HTML"
+
+#: ../inc/wpPersonlizeEditor.php:455 ../wp-personalize.php:51
+msgid "CSS"
+msgstr "CSS"
+
+#: ../inc/wpPersonlizeEditor.php:460 ../wp-personalize.php:52
+msgid "Javascript"
+msgstr "Javascript"
+
+#: ../inc/wpPersonlizeEditor.php:465 ../wp-personalize.php:53
+msgid "PHP"
+msgstr "PHP"
+
+#: ../inc/wpPersonlizeEditor.php:512 ../inc/wpPersonlizeEditor.php:513
+msgid "Create"
+msgstr "Create"
+
+#: ../wp-personalize.php:39
+msgid "WP Personalize"
+msgstr "WP Personalize"
+
+#: ../wp-personalize.php:40
+msgid "WP Personalize Editor"
+msgstr "WP Personalize Editor"
+
+#: ../wp-personalize.php:47
+msgid "Head"
+msgstr "Head"
+
+#: ../wp-personalize.php:48
+msgid "Body Top"
+msgstr "Body Top"
+
+#: ../wp-personalize.php:49
+msgid "Body Footer"
+msgstr "Body Footer"
+
+#: ../wp-personalize.php:54
+msgid "Site Only"
+msgstr "Site Only"
+
+#: ../wp-personalize.php:55
+msgid "Admin Only"
+msgstr "Admin Only"
+
+#: ../wp-personalize.php:56
+msgid "Both"
+msgstr "Both"
+
+#: ../wp-personalize.php:142 ../wp-personalize.php:151
+msgid "You do not have sufficient permissions to access this page."
+msgstr "You do not have sufficient permissions to access this page."
+
+#~ msgid "Information"
+#~ msgstr "Information"
+
+#~ msgid "Theme Name"
+#~ msgstr "Theme Name"
+
+#~ msgid "Theme Version"
+#~ msgstr "Theme Version"
+
+#~ msgid "Theme Author"
+#~ msgstr "Theme Author"
+
+#~ msgid "Status / Action"
+#~ msgstr "Status / Action"
+
+#~ msgid "Fixed"
+#~ msgstr "Fixed"
+
+#~ msgid "Fix"
+#~ msgstr "Fix"
+
+#~ msgid "Restore"
+#~ msgstr "Restore"
+
+#~ msgid "Footer Text"
+#~ msgstr "Footer Text"
+
+#~ msgid "Info Text"
+#~ msgstr "Info Text"
+
+#~ msgid "Default"
+#~ msgstr "Default"
+
+#~ msgid "Your theme seems to be from Elegant Themes where the footer text is editable."
+#~ msgstr "Your theme seems to be from Elegant Themes where the footer text is editable."
+
+#~ msgid "Due to your theme's CSS styling and HTML structure,"
+#~ msgstr "Due to your theme's CSS styling and HTML structure,"
+
+#~ msgid "we recommend that you load the default footer text, before editing."
+#~ msgstr "we recommend that you load the default footer text, before editing."
+
+#~ msgid "Your theme seems to be from Elegant Themes where the footer text is fixable."
+#~ msgstr "Your theme seems to be from Elegant Themes where the footer text is fixable."
+
+#~ msgid "But your privileges prevents you from fixing the footer text."
+#~ msgstr "But your privileges prevents you from fixing the footer text."
+
+#~ msgid "Contact Administrator to help you with this issue."
+#~ msgstr "Contact Administrator to help you with this issue."
+
+#~ msgid "This plugin is not compatible with your current active theme."
+#~ msgstr "This plugin is not compatible with your current active theme."
+
+#~ msgid "If possible, check your theme's documentation on how to change the footer text."
+#~ msgstr "If possible, check your theme's documentation on how to change the footer text."
+
+#~ msgid "So please \"Fix\" the footer file, before editing."
+#~ msgstr "So please \"Fix\" the footer file, before editing."
+
+#~ msgid "This theme doesn't contain a static footer text."
+#~ msgstr "This theme doesn't contain a static footer text."
+
+#~ msgid "WP Footer"
+#~ msgstr "WP Footer"
+
+#~ msgid "WP Footer Editor"
+#~ msgstr "WP Footer Editor"
+
+#~ msgid "This theme's file(s) containing static footer text, is/are not writable:"
+#~ msgstr "This theme's file(s) containing static footer text, is/are not writable:"
+
+#~ msgid "<br/><br/>Please fix the write permission for the above file(s), before continuing."
+#~ msgstr "<br/><br/>Please fix the write permission for the above file(s), before continuing."
+
+#~ msgid "This theme's file(s) containing static footer text, is/are not found:"
+#~ msgstr "This theme's file(s) containing static footer text, is/are not found:"
+
+#~ msgid "<br/><br/>Please fix the problem(s) for the above file(s), before continuing."
+#~ msgstr "<br/><br/>Please fix the problem(s) for the above file(s), before continuing."
+
+#~ msgid "Home"
+#~ msgstr "Home"
+
+#~ msgid "Company"
+#~ msgstr "Company"
+
+#~ msgid "Contact"
+#~ msgstr "Contact"
+
+#~ msgid "Sign In"
+#~ msgstr "Sign In"
+
+#~ msgid "Development"
+#~ msgstr "Development"
+
+#~ msgid "Solutions"
+#~ msgstr "Solutions"
+
+#~ msgid "Services"
+#~ msgstr "Services"
+
+#~ msgid "Experts"
+#~ msgstr "Experts"
+
+#~ msgid "Resources"
+#~ msgstr "Resources"
+
+#~ msgid "Templates"
+#~ msgstr "Templates"
+
+#~ msgid "Scripts"
+#~ msgstr "Scripts"
+
+#~ msgid "Articles"
+#~ msgstr "Articles"
+
+#~ msgid "Support"
+#~ msgstr "Support"
+
+#~ msgid "Something went wrong, the Administrator has been notified."
+#~ msgstr "Something went wrong, the Administrator has been notified."
+
+#~ msgid "Articles & Links"
+#~ msgstr "Articles & Links"
+
+#~ msgid "Contact Form"
+#~ msgstr "Contact Form"
+
+#~ msgid "Name"
+#~ msgstr "Name"
+
+#~ msgid "Phone"
+#~ msgstr "Phone"
+
+#~ msgid "Email"
+#~ msgstr "Email"
+
+#~ msgid "Scripts & Programs"
+#~ msgstr "Scripts & Programs"
+
+#~ msgid "Support & Service"
+#~ msgstr "Support & Service"
+
+#~ msgid "Templates & Design"
+#~ msgstr "Templates & Design"
+
+#~ msgid "Your Name"
+#~ msgstr "Your Name"
+
+#~ msgid "Your Phone"
+#~ msgstr "Your Phone"
+
+#~ msgid "Your Email"
+#~ msgstr "Your Email"
+
+#~ msgid "Your Message"
+#~ msgstr "Your Message"
+
+#~ msgid "Message"
+#~ msgstr "Message"
+
+#~ msgid "Send"
+#~ msgstr "Send"
+
+#~ msgid "Coming Soon"
+#~ msgstr "Coming Soon"
+
+#~ msgid "Under Development"
+#~ msgstr "Under Development"
+
+#~ msgid "About Us"
+#~ msgstr "About Us"
+
+#~ msgid "References"
+#~ msgstr "References"
+
+#~ msgid "Join Us"
+#~ msgstr "Join Us"
+
+#~ msgid "Ecalon IT LTD. is a global consultancy and service company with highly qualified and experienced professional development teams. Professionals, who have many man-years experience in providing best of breed IT and engineering solutions to global customers."
+#~ msgstr "Ecalon IT LTD. is a global consultancy and service company with highly qualified and experienced professional development teams. Professionals, who have many man-years experience in providing best of breed IT and engineering solutions to global customers."
+
+#~ msgid "Our quality work coupled with the time and cost advantages of delivery from independent consultants has already provided strategic competitive benefits to our existing valued clients worldwide. With expertise and years of experience, Ecalon IT has established as a quality and cost effective consulting company."
+#~ msgstr "Our quality work coupled with the time and cost advantages of delivery from independent consultants has already provided strategic competitive benefits to our existing valued clients worldwide. With expertise and years of experience, Ecalon IT has established as a quality and cost effective consulting company."
+
+#~ msgid "We treat every individual with dignity and respect, openly sharing information, providing feedback, and listening to each other. Our environment is one of continuous learning in which all employees, regardless of cultural background, religion, gender, level or position can develop to their full potential. We value the unique contributions of all individuals, recognizing the diversity of our workforce as a competitive advantage."
+#~ msgstr "We treat every individual with dignity and respect, openly sharing information, providing feedback, and listening to each other. Our environment is one of continuous learning in which all employees, regardless of cultural background, religion, gender, level or position can develop to their full potential. We value the unique contributions of all individuals, recognizing the diversity of our workforce as a competitive advantage."
+
+#~ msgid "We work openly and supportively in teams, aiming towards common goals. We form teams with our customers and suppliers to respond quickly to changing customer needs. We have fun working with each other and we take pride in our joint accomplishments."
+#~ msgstr "We work openly and supportively in teams, aiming towards common goals. We form teams with our customers and suppliers to respond quickly to changing customer needs. We have fun working with each other and we take pride in our joint accomplishments."
+
+#~ msgid "Ecalon IT has delivered rightsourcing solutions to many customers including:"
+#~ msgstr "Ecalon IT has delivered rightsourcing solutions to many customers including:"
+
+#~ msgid "Telenor Denmark A/S"
+#~ msgstr "Telenor Denmark A/S"
+
+#~ msgid "Danish Health Sector"
+#~ msgstr "Danish Health Sector"
+
+#~ msgid "Danish Military"
+#~ msgstr "Danish Military"
+
+#~ msgid "KMD A/S"
+#~ msgstr "KMD A/S"
+
+#~ msgid "Paschal Denmark A/S"
+#~ msgstr "Paschal Denmark A/S"
+
+#~ msgid "DONG Energy A/S"
+#~ msgstr "DONG Energy A/S"
+
+#~ msgid "Cegedim Denmark A/S"
+#~ msgstr "Cegedim Denmark A/S"
+
+#~ msgid "Skandinavisk Datacenter A/S"
+#~ msgstr "Skandinavisk Datacenter A/S"
+
+#~ msgid "Services to these organizations have been delivered in both on-site and off-site, with complete data confidentiality and security."
+#~ msgstr "Services to these organizations have been delivered in both on-site and off-site, with complete data confidentiality and security."
+
+#~ msgid "Working as consultant for Ecalon IT will provide you with the opportunity to work for a company with a diverse range of clients working across the public and private sectors. We are looking for intelligent, outgoing and skilled IT personnel or graduates from a variety of academic backgrounds for a junior or senior full-time or part-time independent consultant."
+#~ msgstr "Working as consultant for Ecalon IT will provide you with the opportunity to work for a company with a diverse range of clients working across the public and private sectors. We are looking for intelligent, outgoing and skilled IT personnel or graduates from a variety of academic backgrounds for a junior or senior full-time or part-time independent consultant."
+
+#~ msgid "If you would like to be considered as independent consultant and are committed to build the best team in Information Technology and work for a challenging and exciting company, then we would love to hear from you, we encourage you to contact us. Upon contact, a member of our staffing team will be notified and an initial contact will be set."
+#~ msgstr "If you would like to be considered as independent consultant and are committed to build the best team in Information Technology and work for a challenging and exciting company, then we would love to hear from you, we encourage you to contact us. Upon contact, a member of our staffing team will be notified and an initial contact will be set."
+
+#~ msgid "Your contact information and message has been successfully submitted."
+#~ msgstr "Your contact information and message has been successfully submitted."
+
+#~ msgid "You will be contacted shortly."
+#~ msgstr "You will be contacted shortly."
+
+#~ msgid "Success of every software development project depends on constantly ensuring improvement of standards, processes, models, and awareness of pitfalls. It also includes a defined process and effective teamwork with the client, which are both crucial for the quality of the deliverables and overall success of a software development project."
+#~ msgstr "Success of every software development project depends on constantly ensuring improvement of standards, processes, models, and awareness of pitfalls. It also includes a defined process and effective teamwork with the client, which are both crucial for the quality of the deliverables and overall success of a software development project."
+
+#~ msgid "With the combined force of our experts within our development team, Ecalon IT will take firm control of the entire life cycle of your software development project and make sure your most complex ideas and needs are implemented in the end product."
+#~ msgstr "With the combined force of our experts within our development team, Ecalon IT will take firm control of the entire life cycle of your software development project and make sure your most complex ideas and needs are implemented in the end product."
+
+#~ msgid "Processes"
+#~ msgstr "Processes"
+
+#~ msgid "The development process includes not only the actual writing of code but also the preparation of requirements and objectives, the design of what is to be coded, and confirmation that what has been developed has met objectives."
+#~ msgstr "The development process includes not only the actual writing of code but also the preparation of requirements and objectives, the design of what is to be coded, and confirmation that what has been developed has met objectives."
+
+#~ msgid "Ecalon IT believes that software development is the process of creating software through successive phases in an orderly way. Depending on the project, we can provide the following phases as single or packet:"
+#~ msgstr "Ecalon IT believes that software development is the process of creating software through successive phases in an orderly way. Depending on the project, we can provide the following phases as single or packet:"
+
+#~ msgid "Identification of required software"
+#~ msgstr "Identification of required software"
+
+#~ msgid "Analysis of the software requirements"
+#~ msgstr "Analysis of the software requirements"
+
+#~ msgid "Detailed specification of the software requirements"
+#~ msgstr "Detailed specification of the software requirements"
+
+#~ msgid "Software design"
+#~ msgstr "Software design"
+
+#~ msgid "Programming"
+#~ msgstr "Programming"
+
+#~ msgid "Testing"
+#~ msgstr "Testing"
+
+#~ msgid "Maintenance"
+#~ msgstr "Maintenance"
+
+#~ msgid "Models"
+#~ msgstr "Models"
+
+#~ msgid "Software development methodologies are used to structure, plan and control the development process of software solutions. But with several models to choose from, each one with its pros and cons, the choice becomes essential for fulfilling your organizational and project needs."
+#~ msgstr "Software development methodologies are used to structure, plan and control the development process of software solutions. But with several models to choose from, each one with its pros and cons, the choice becomes essential for fulfilling your organizational and project needs."
+
+#~ msgid "Our development team will adopt the most appropriate one for the project or combine the models to obtain the best end result. Our team's profound experience with software models includes e.g.:"
+#~ msgstr "Our development team will adopt the most appropriate one for the project or combine the models to obtain the best end result. Our team's profound experience with software models includes e.g.:"
+
+#~ msgid "Waterfall"
+#~ msgstr "Waterfall"
+
+#~ msgid "Spiral"
+#~ msgstr "Spiral"
+
+#~ msgid "Agile"
+#~ msgstr "Agile"
+
+#~ msgid "Rapid Applicaiton Development (RAD)"
+#~ msgstr "Rapid Applicaiton Development (RAD)"
+
+#~ msgid "Iterative Development"
+#~ msgstr "Iterative Development"
+
+#~ msgid "Prototyping"
+#~ msgstr "Prototyping"
+
+#~ msgid "Code and Fix"
+#~ msgstr "Code and Fix"
+
+#~ msgid "Organization"
+#~ msgstr "Organization"
+
+#~ msgid "One of the most insidious mistakes in IT development, is when a project gets focused on the technology being implemented and not on the business. That is why IT organizations have been in transition for at least the last decade, moving from a technology focus to a focus on business processes, relationships and delivery."
+#~ msgstr "One of the most insidious mistakes in IT development, is when a project gets focused on the technology being implemented and not on the business. That is why IT organizations have been in transition for at least the last decade, moving from a technology focus to a focus on business processes, relationships and delivery."
+
+#~ msgid "Our organizational structure and division of responsibilities permits fast execution of complex projects with the initial focus on the business and not the technology and consists of the following roles:"
+#~ msgstr "Our organizational structure and division of responsibilities permits fast execution of complex projects with the initial focus on the business and not the technology and consists of the following roles:"
+
+#~ msgid "Product Manager (Business)"
+#~ msgstr "Product Manager (Business)"
+
+#~ msgid "Architect (Technology)"
+#~ msgstr "Architect (Technology)"
+
+#~ msgid "Project Manager"
+#~ msgstr "Project Manager"
+
+#~ msgid "Developer"
+#~ msgstr "Developer"
+
+#~ msgid "Quality Assurance & Test"
+#~ msgstr "Quality Assurance & Test"
+
+#~ msgid "Setup"
+#~ msgstr "Setup"
+
+#~ msgid "The Monitoring and Controlling process oversees all the tasks and metrics necessary to ensure that the approved and authorized project is within scope, on time, and on budget so that the project proceeds with minimal risk."
+#~ msgstr "The Monitoring and Controlling process oversees all the tasks and metrics necessary to ensure that the approved and authorized project is within scope, on time, and on budget so that the project proceeds with minimal risk."
+
+#~ msgid "Ecalon IT does not ignore the importance of a solid development setup where the purpose is to keep the customer, team and management satisfied and up to date on the project's progress, therefor our setup resides on:"
+#~ msgstr "Ecalon IT does not ignore the importance of a solid development setup where the purpose is to keep the customer, team and management satisfied and up to date on the project's progress, therefor our setup resides on:"
+
+#~ msgid "Project Management"
+#~ msgstr "Project Management"
+
+#~ msgid "Version Control"
+#~ msgstr "Version Control"
+
+#~ msgid "Documentation"
+#~ msgstr "Documentation"
+
+#~ msgid "Development / Test Environment"
+#~ msgstr "Development / Test Environment"
+
+#~ msgid "Risk / Resource Management"
+#~ msgstr "Risk / Resource Management"
+
+#~ msgid "At Ecalon IT, individuals and teams have the ability to make decisions and take actions. Decisions are made as close to the customer as possible, so that we can act quickly to assure total customer satisfaction. We are accountable for our decisions and actions. Each of us accepts responsibility for meeting the needs of our customers and our fellow employees."
+#~ msgstr "At Ecalon IT, individuals and teams have the ability to make decisions and take actions. Decisions are made as close to the customer as possible, so that we can act quickly to assure total customer satisfaction. We are accountable for our decisions and actions. Each of us accepts responsibility for meeting the needs of our customers and our fellow employees."
+
+#~ msgid "We work openly and supportively in teams, aiming towards common goals. Our Senior Consultants form teams with our customers and suppliers to respond quickly to changing customer needs."
+#~ msgstr "We work openly and supportively in teams, aiming towards common goals. Our Senior Consultants form teams with our customers and suppliers to respond quickly to changing customer needs."
+
+#~ msgid "Senior Consultant"
+#~ msgstr "Senior Consultant"
+
+#~ msgid "IT Roles"
+#~ msgstr "IT Roles"
+
+#~ msgid "Architect"
+#~ msgstr "Architect"
+
+#~ msgid "System Developer"
+#~ msgstr "System Developer"
+
+#~ msgid "DB Developer"
+#~ msgstr "DB Developer"
+
+#~ msgid "Quality Assurance"
+#~ msgstr "Quality Assurance"
+
+#~ msgid "Technologies"
+#~ msgstr "Technologies"
+
+#~ msgid "VB"
+#~ msgstr "VB"
+
+#~ msgid "C#"
+#~ msgstr "C#"
+
+#~ msgid "Java"
+#~ msgstr "Java"
+
+#~ msgid "C"
+#~ msgstr "C"
+
+#~ msgid "Objective C"
+#~ msgstr "Objective C"
+
+#~ msgid "Perl"
+#~ msgstr "Perl"
+
+#~ msgid "HTML5"
+#~ msgstr "HTML5"
+
+#~ msgid "CSS3"
+#~ msgstr "CSS3"
+
+#~ msgid "Python"
+#~ msgstr "Python"
+
+#~ msgid "SQL"
+#~ msgstr "SQL"
+
+#~ msgid "PL/SQL"
+#~ msgstr "PL/SQL"
+
+#~ msgid "SOAP"
+#~ msgstr "SOAP"
+
+#~ msgid "Frameworks"
+#~ msgstr "Frameworks"
+
+#~ msgid ".Net"
+#~ msgstr ".Net"
+
+#~ msgid "Zend"
+#~ msgstr "Zend"
+
+#~ msgid "Symfony"
+#~ msgstr "Symfony"
+
+#~ msgid "JBoss Seam"
+#~ msgstr "JBoss Seam"
+
+#~ msgid "Bootstrap"
+#~ msgstr "Bootstrap"
+
+#~ msgid "Libraries / APIs"
+#~ msgstr "Libraries / APIs"
+
+#~ msgid "jQuery"
+#~ msgstr "jQuery"
+
+#~ msgid "RichFaces"
+#~ msgstr "RichFaces"
+
+#~ msgid "Servers"
+#~ msgstr "Servers"
+
+#~ msgid "Linux"
+#~ msgstr "Linux"
+
+#~ msgid "Apache"
+#~ msgstr "Apache"
+
+#~ msgid "MySQL"
+#~ msgstr "MySQL"
+
+#~ msgid "Red5"
+#~ msgstr "Red5"
+
+#~ msgid "Subversion"
+#~ msgstr "Subversion"
+
+#~ msgid "Software"
+#~ msgstr "Software"
+
+#~ msgid "Visual Studio"
+#~ msgstr "Visual Studio"
+
+#~ msgid "Xcode"
+#~ msgstr "Xcode"
+
+#~ msgid "Eclipse"
+#~ msgstr "Eclipse"
+
+#~ msgid "Perforce Client"
+#~ msgstr "Perforce Client"
+
+#~ msgid "TortoiseSVN"
+#~ msgstr "TortoiseSVN"
+
+#~ msgid "MySQL Workbench"
+#~ msgstr "MySQL Workbench"
+
+#~ msgid "PL/SQL Developer"
+#~ msgstr "PL/SQL Developer"
+
+#~ msgid "SchoolIntra"
+#~ msgstr "SchoolIntra"
+
+#~ msgid "Produktiv IT ApS"
+#~ msgstr "Produktiv IT ApS"
+
+#~ msgid "Education"
+#~ msgstr "Education"
+
+#~ msgid "Bachelor of Computer Science"
+#~ msgstr "Bachelor of Computer Science"
+
+#~ msgid "Bachelor of  Mathematics"
+#~ msgstr "Bachelor of  Mathematics"
+
+#~ msgid "Ongoing"
+#~ msgstr "Ongoing"
+
+#~ msgid "Languages"
+#~ msgstr "Languages"
+
+#~ msgid "English"
+#~ msgstr "English"
+
+#~ msgid "Danish"
+#~ msgstr "Danish"
+
+#~ msgid "Product Manager"
+#~ msgstr "Product Manager"
+
+#~ msgid "REST"
+#~ msgstr "REST"
+
+#~ msgid "Maven"
+#~ msgstr "Maven"
+
+#~ msgid "Ant"
+#~ msgstr "Ant"
+
+#~ msgid "Hudson"
+#~ msgstr "Hudson"
+
+#~ msgid "Jenkins"
+#~ msgstr "Jenkins"
+
+#~ msgid "TestNG"
+#~ msgstr "TestNG"
+
+#~ msgid "JUnit"
+#~ msgstr "JUnit"
+
+#~ msgid "Hibernate"
+#~ msgstr "Hibernate"
+
+#~ msgid "JDBC"
+#~ msgstr "JDBC"
+
+#~ msgid "JBoss AS"
+#~ msgstr "JBoss AS"
+
+#~ msgid "Oracle WebLogic"
+#~ msgstr "Oracle WebLogic"
+
+#~ msgid "Git"
+#~ msgstr "Git"
+
+#~ msgid "Technical University of Denmark"
+#~ msgstr "Technical University of Denmark"
+
+#~ msgid "Master of Computer Science"
+#~ msgstr "Master of Computer Science"
+
+#~ msgid "Russian"
+#~ msgstr "Russian"
+
+#~ msgid "Game Designer / Developer"
+#~ msgstr "Game Designer / Developer"
+
+#~ msgid "C++"
+#~ msgstr "C++"
+
+#~ msgid "Oolong Engine"
+#~ msgstr "Oolong Engine"
+
+#~ msgid "Bullet Engine"
+#~ msgstr "Bullet Engine"
+
+#~ msgid "Nutch"
+#~ msgstr "Nutch"
+
+#~ msgid "Hadoop"
+#~ msgstr "Hadoop"
+
+#~ msgid "Cocoa Touch"
+#~ msgstr "Cocoa Touch"
+
+#~ msgid "OCUnit"
+#~ msgstr "OCUnit"
+
+#~ msgid "STL"
+#~ msgstr "STL"
+
+#~ msgid "OpenGL"
+#~ msgstr "OpenGL"
+
+#~ msgid "Mercurial"
+#~ msgstr "Mercurial"
+
+#~ msgid "AppRus."
+#~ msgstr "AppRus."
+
+#~ msgid "e-Legion Ltd."
+#~ msgstr "e-Legion Ltd."
+
+#~ msgid "Commandro"
+#~ msgstr "Commandro"
+
+#~ msgid "UX Designer"
+#~ msgstr "UX Designer"
+
+#~ msgid "Online Marketing Manager"
+#~ msgstr "Online Marketing Manager"
+
+#~ msgid "Competencies"
+#~ msgstr "Competencies"
+
+#~ msgid "UX Design Principles"
+#~ msgstr "UX Design Principles"
+
+#~ msgid "UCD Processes"
+#~ msgstr "UCD Processes"
+
+#~ msgid "Usability"
+#~ msgstr "Usability"
+
+#~ msgid "Specification / Requirements  Documentation"
+#~ msgstr "Specification / Requirements  Documentation"
+
+#~ msgid "Marketing Management"
+#~ msgstr "Marketing Management"
+
+#~ msgid "SEO"
+#~ msgstr "SEO"
+
+#~ msgid "Website Analysis"
+#~ msgstr "Website Analysis"
+
+#~ msgid "Campaign Development"
+#~ msgstr "Campaign Development"
+
+#~ msgid "Market Samurai"
+#~ msgstr "Market Samurai"
+
+#~ msgid "Google Analytics"
+#~ msgstr "Google Analytics"
+
+#~ msgid "Google AdWords / AdSense"
+#~ msgstr "Google AdWords / AdSense"
+
+#~ msgid "TB Media ApS"
+#~ msgstr "TB Media ApS"
+
+#~ msgid "Design Manager"
+#~ msgstr "Design Manager"
+
+#~ msgid "Concept Manager"
+#~ msgstr "Concept Manager"
+
+#~ msgid "Video Production / Editing"
+#~ msgstr "Video Production / Editing"
+
+#~ msgid "Web Distribution"
+#~ msgstr "Web Distribution"
+
+#~ msgid "Motion Graphic"
+#~ msgstr "Motion Graphic"
+
+#~ msgid "Photography"
+#~ msgstr "Photography"
+
+#~ msgid "Journalism"
+#~ msgstr "Journalism"
+
+#~ msgid "Concept Development"
+#~ msgstr "Concept Development"
+
+#~ msgid "Final Cut Pro"
+#~ msgstr "Final Cut Pro"
+
+#~ msgid "Photoshop"
+#~ msgstr "Photoshop"
+
+#~ msgid "Indesign"
+#~ msgstr "Indesign"
+
+#~ msgid "Illustrator"
+#~ msgstr "Illustrator"
+
+#~ msgid "Fireworks"
+#~ msgstr "Fireworks"
+
+#~ msgid "Code Sign Research"
+#~ msgstr "Code Sign Research"
+
+#~ msgid "Museum of Copenhagen"
+#~ msgstr "Museum of Copenhagen"
+
+#~ msgid "Danish Broadcasting TV"
+#~ msgstr "Danish Broadcasting TV"
+
+#~ msgid "Master of Design"
+#~ msgstr "Master of Design"
+
+#~ msgid "Graphic Designer"
+#~ msgstr "Graphic Designer"
+
+#~ msgid "Concept Developer"
+#~ msgstr "Concept Developer"
+
+#~ msgid "Painting"
+#~ msgstr "Painting"
+
+#~ msgid "Logo Design"
+#~ msgstr "Logo Design"
+
+#~ msgid "Poster Design"
+#~ msgstr "Poster Design"
+
+#~ msgid "MS Power Point / Word / Excel"
+#~ msgstr "MS Power Point / Word / Excel"
+
+#~ msgid "Coral Draw"
+#~ msgstr "Coral Draw"
+
+#~ msgid "QuarkXPress"
+#~ msgstr "QuarkXPress"
+
+#~ msgid "Lyngby-Taarbaek Municipality"
+#~ msgstr "Lyngby-Taarbaek Municipality"
+
+#~ msgid "Trailer Park Festival"
+#~ msgstr "Trailer Park Festival"
+
+#~ msgid "Children's Mission Denmark"
+#~ msgstr "Children's Mission Denmark"
+
+#~ msgid "Master of Fine Arts"
+#~ msgstr "Master of Fine Arts"
+
+#~ msgid "DW Developer"
+#~ msgstr "DW Developer"
+
+#~ msgid "BI Developer"
+#~ msgstr "BI Developer"
+
+#~ msgid "SharePoint"
+#~ msgstr "SharePoint"
+
+#~ msgid "Tera Data"
+#~ msgstr "Tera Data"
+
+#~ msgid "SAS"
+#~ msgstr "SAS"
+
+#~ msgid "SAP PI"
+#~ msgstr "SAP PI"
+
+#~ msgid "SAP Netweaver"
+#~ msgstr "SAP Netweaver"
+
+#~ msgid "Windows Azure"
+#~ msgstr "Windows Azure"
+
+#~ msgid "Active Directory"
+#~ msgstr "Active Directory"
+
+#~ msgid "Tera Data Studio"
+#~ msgstr "Tera Data Studio"
+
+#~ msgid "SAS DI"
+#~ msgstr "SAS DI"
+
+#~ msgid "Office 365"
+#~ msgstr "Office 365"
+
+#~ msgid "SQL Server"
+#~ msgstr "SQL Server"
+
+#~ msgid "TortiseSVN"
+#~ msgstr "TortiseSVN"
+
+#~ msgid "MS SQL Server"
+#~ msgstr "MS SQL Server"
+
+#~ msgid "Windows Server"
+#~ msgstr "Windows Server"
+
+#~ msgid "IIS"
+#~ msgstr "IIS"
+
+#~ msgid "Team Foundation Server"
+#~ msgstr "Team Foundation Server"
+
+#~ msgid "ImpleVista ApS"
+#~ msgstr "ImpleVista ApS"
+
+#~ msgid "Bjorn Laursen A/S"
+#~ msgstr "Bjorn Laursen A/S"
+
+#~ msgid "Bengali"
+#~ msgstr "Bengali"
+
+#~ msgid "Master of Telecommunications"
+#~ msgstr "Master of Telecommunications"
+
+#~ msgid "Arabic"
+#~ msgstr "Arabic"
+
+#~ msgid "Software development is what Ecalon IT and our experts do and have been doing for more than 10 years. We are experts in custom development, designed to meet the specific requirements and needs of your organization."
+#~ msgstr "Software development is what Ecalon IT and our experts do and have been doing for more than 10 years. We are experts in custom development, designed to meet the specific requirements and needs of your organization."
+
+#~ msgid "We follow proven practices, models and processes that ensure successful project completion. We deliver solutions that exceed customer expectations. We have working experience with a broad range of customers, from individuals to some of the largest companies in the world."
+#~ msgstr "We follow proven practices, models and processes that ensure successful project completion. We deliver solutions that exceed customer expectations. We have working experience with a broad range of customers, from individuals to some of the largest companies in the world."
+
+#~ msgid "Read More"
+#~ msgstr "Read More"
+
+#~ msgid "Realizing new concepts and ideas can be time and resource consuming. Ecalon IT has many years of experience in assisting individuals and companies by analyzing concepts and ideas, doing architectural design, code / database development, quality assurance and maintenance."
+#~ msgstr "Realizing new concepts and ideas can be time and resource consuming. Ecalon IT has many years of experience in assisting individuals and companies by analyzing concepts and ideas, doing architectural design, code / database development, quality assurance and maintenance."
+
+#~ msgid "We help companies develop custom software solutions, migrate from legacy technology to new improved technologies, and upgrade home grown applications to robust, scalable and reliable business applications."
+#~ msgstr "We help companies develop custom software solutions, migrate from legacy technology to new improved technologies, and upgrade home grown applications to robust, scalable and reliable business applications."
+
+#~ msgid "A successful software product is much more than the actual code. Such aspects as market analysis, scalable design, solid architectural foundation, code optimization, in-depth UX Design and effective management skills are all key players in the development setup / process. "
+#~ msgstr "A successful software product is much more than the actual code. Such aspects as market analysis, scalable design, solid architectural foundation, code optimization, in-depth UX Design and effective management skills are all key players in the development setup / process. "
+
+#~ msgid "We are able to provide highly skilled consultants in the full spectrum of the development setup, either by optimizing your etasblished development setup or by building a solid setup from the ground up."
+#~ msgstr "We are able to provide highly skilled consultants in the full spectrum of the development setup, either by optimizing your etasblished development setup or by building a solid setup from the ground up."
+
+#~ msgid "Ecalon IT is a group of technology consulting experts, providing a full spectrum of design, development services and management. No matter the scale of your project, we are confident in our ability to exceed your needs."
+#~ msgstr "Ecalon IT is a group of technology consulting experts, providing a full spectrum of design, development services and management. No matter the scale of your project, we are confident in our ability to exceed your needs."
+
+#~ msgid "By providing both on-site and off-site experts as high performance individuals or teams, you will get an IT partner that quickly transforms new technologies and ideas into products and services that improve the effectiveness of your business."
+#~ msgstr "By providing both on-site and off-site experts as high performance individuals or teams, you will get an IT partner that quickly transforms new technologies and ideas into products and services that improve the effectiveness of your business."
+
+#~ msgid "Take advantage of our free collection of resources. The resources listed below can help you get started, for example with the design for your new or old solutions, scripts and small programs to ease everyday headaches, articles or links to help you with relevant subjects."
+#~ msgstr "Take advantage of our free collection of resources. The resources listed below can help you get started, for example with the design for your new or old solutions, scripts and small programs to ease everyday headaches, articles or links to help you with relevant subjects."
+
+#~ msgid "The 'Support & Service' section is primarily for 3rd party software and services we use when delivering customized solutions for our clients."
+#~ msgstr "The 'Support & Service' section is primarily for 3rd party software and services we use when delivering customized solutions for our clients."
+
+#~ msgid "Browse"
+#~ msgstr "Browse"
+
+#~ msgid "Companies of all industries are learning the value of hiring consultants or outsourcing IT services to third party providers. By working with a subcontractor, companies can enjoy having more time and resources for other projects, while experts in the field maintain IT related tasks remotely or onsite."
+#~ msgstr "Companies of all industries are learning the value of hiring consultants or outsourcing IT services to third party providers. By working with a subcontractor, companies can enjoy having more time and resources for other projects, while experts in the field maintain IT related tasks remotely or onsite."
+
+#~ msgid "Through our wide range of IT services and our expertise we are able to bring performance, quality and productivity benefits to the clients, their business and their employees."
+#~ msgstr "Through our wide range of IT services and our expertise we are able to bring performance, quality and productivity benefits to the clients, their business and their employees."
+
+#~ msgid "Management"
+#~ msgstr "Management"
+
+#~ msgid "Information technology and its leadership have undergone fundamental changes over the past decade. Where successful use of IT within a company depends, to a large extent, on the IT department executives and the IT project managers."
+#~ msgstr "Information technology and its leadership have undergone fundamental changes over the past decade. Where successful use of IT within a company depends, to a large extent, on the IT department executives and the IT project managers."
+
+#~ msgid "Our consultants provide clients with the expertise and leadership required for successful project definition and end-to-end delivery where the below management roles can assist:"
+#~ msgstr "Our consultants provide clients with the expertise and leadership required for successful project definition and end-to-end delivery where the below management roles can assist:"
+
+#~ msgid "IT Manager / Executive"
+#~ msgstr "IT Manager / Executive"
+
+#~ msgid "Architecture"
+#~ msgstr "Architecture"
+
+#~ msgid "The information technology architect applies resources to meet specific business requirements. The role requires a high degree of technical expertise as well as business understanding, as IT architects determine which information technology investments will yield the best return."
+#~ msgstr "The information technology architect applies resources to meet specific business requirements. The role requires a high degree of technical expertise as well as business understanding, as IT architects determine which information technology investments will yield the best return."
+
+#~ msgid "Our architect's involvement in the software development will help your business with the right decisions and documentation based on a wide range of factors, which may include, e.g.:"
+#~ msgstr "Our architect's involvement in the software development will help your business with the right decisions and documentation based on a wide range of factors, which may include, e.g.:"
+
+#~ msgid "Alignment of IT strategy and planning."
+#~ msgstr "Alignment of IT strategy and planning."
+
+#~ msgid "Evolving business needs and technology capabilities."
+#~ msgstr "Evolving business needs and technology capabilities."
+
+#~ msgid "Design and documentation of the technology stack."
+#~ msgstr "Design and documentation of the technology stack."
+
+#~ msgid "UX Design"
+#~ msgstr "UX Design"
+
+#~ msgid "The main goal for every company is to design or deliver products, services or systems which offer a high degree of user experience. With the UX design methodology your product get optimized around how users can, want, or need to use the product, rather than forcing the users to change their behavior to accommodate the product."
+#~ msgstr "The main goal for every company is to design or deliver products, services or systems which offer a high degree of user experience. With the UX design methodology your product get optimized around how users can, want, or need to use the product, rather than forcing the users to change their behavior to accommodate the product."
+
+#~ msgid "We can help your company to achieve this by applying our knowledge and expertise with user experience design methodology for:"
+#~ msgstr "We can help your company to achieve this by applying our knowledge and expertise with user experience design methodology for:"
+
+#~ msgid "Existing or legacy systems."
+#~ msgstr "Existing or legacy systems."
+
+#~ msgid "New concepts or systems."
+#~ msgstr "New concepts or systems."
+
+#~ msgid "Optimization"
+#~ msgstr "Optimization"
+
+#~ msgid "Minimizing costs or serve the business better? Optimization strategy consists of many components from reducing costs, increase efficiency, improve business processes, innovation that will lead to competitive advantages to maximizing business value."
+#~ msgstr "Minimizing costs or serve the business better? Optimization strategy consists of many components from reducing costs, increase efficiency, improve business processes, innovation that will lead to competitive advantages to maximizing business value."
+
+#~ msgid "Our IT optimization consulting team will assist your company finding the right balance between IT capabilities and costs to maximize business value for:"
+#~ msgstr "Our IT optimization consulting team will assist your company finding the right balance between IT capabilities and costs to maximize business value for:"
+
+#~ msgid "Security"
+#~ msgstr "Security"
+
+#~ msgid "Security awareness is a sound and healthy business strategy, because every week there appear new headlines about hackers bringing an organization to its knees. Stolen funds, company secrets, bad publicity, and embarrassing revelations are front page news. Security is more than just sound and healthy, it is in most cases the law."
+#~ msgstr "Security awareness is a sound and healthy business strategy, because every week there appear new headlines about hackers bringing an organization to its knees. Stolen funds, company secrets, bad publicity, and embarrassing revelations are front page news. Security is more than just sound and healthy, it is in most cases the law."
+
+#~ msgid "We help companies to protect their information and its systems from unauthorized access, use, disclosure, disruption, modification, or destruction in areas of:"
+#~ msgstr "We help companies to protect their information and its systems from unauthorized access, use, disclosure, disruption, modification, or destruction in areas of:"
+
+#~ msgid "Security awareness training."
+#~ msgstr "Security awareness training."
+
+#~ msgid "Source code security assessment."
+#~ msgstr "Source code security assessment."
+
+#~ msgid "Network security architecture."
+#~ msgstr "Network security architecture."
+
+#~ msgid "Defense strategies."
+#~ msgstr "Defense strategies."
+
+#~ msgid "Support and Maintenance"
+#~ msgstr "Support and Maintenance"
+
+#~ msgid "Regular support or maintenance is to ensure that all components required for production is operating at 100% efficiency at all times. Through short daily inspections, updates applied, and making minor adjustments, minor problems can be detected and corrected before they become a major problem that can shut down a production stack."
+#~ msgstr "Regular support or maintenance is to ensure that all components required for production is operating at 100% efficiency at all times. Through short daily inspections, updates applied, and making minor adjustments, minor problems can be detected and corrected before they become a major problem that can shut down a production stack."
+
+#~ msgid "Ecalon IT helps companies to change from a <i>fail</i> and <i>fix</i> approach to a more sustainable <i>predict</i> and <i>prevent</i> approach according to a Support and Maintenance Agreement."
+#~ msgstr "Ecalon IT helps companies to change from a <i>fail</i> and <i>fix</i> approach to a more sustainable <i>predict</i> and <i>prevent</i> approach according to a Support and Maintenance Agreement."
+
+#~ msgid "Network or communication components."
+#~ msgstr "Network or communication components."
+
+#~ msgid "Servers / computers."
+#~ msgstr "Servers / computers."
+
+#~ msgid "Software updates / patches."
+#~ msgstr "Software updates / patches."
+
+#~ msgid "Surveillance and alarm solutions."
+#~ msgstr "Surveillance and alarm solutions."
+
+#~ msgid "Software solutions have since the eighties been an essentiel part for businesses in any industry. Where commercial off-the-shelf (COTS) solutions cover the majority of the software needs for any given business, there are businesses that have very specific needs that COTS software solutions cannot provide or the cost and delay of COTS customization frequently adds up to the expense of developing custom software."
+#~ msgstr "Software solutions have since the eighties been an essentiel part for businesses in any industry. Where commercial off-the-shelf (COTS) solutions cover the majority of the software needs for any given business, there are businesses that have very specific needs that COTS software solutions cannot provide or the cost and delay of COTS customization frequently adds up to the expense of developing custom software."
+
+#~ msgid "With our help companies or individuals can achieve tailored software solutions for wide and narrow audiences and where the achievement of the desired results is at focus from day one."
+#~ msgstr "With our help companies or individuals can achieve tailored software solutions for wide and narrow audiences and where the achievement of the desired results is at focus from day one."
+
+#~ msgid "Web Solutions"
+#~ msgstr "Web Solutions"
+
+#~ msgid "The Internet was created in the first place as an information source. But today users expect more than just a static web page, they expect a Rich Internet Application (RIA) where experience brought from desktop to browser, whether it is from a graphical point of view or usability point of view."
+#~ msgstr "The Internet was created in the first place as an information source. But today users expect more than just a static web page, they expect a Rich Internet Application (RIA) where experience brought from desktop to browser, whether it is from a graphical point of view or usability point of view."
+
+#~ msgid "With experienced developers, Ecalon IT provides its  full-cycle web development for fast, scalable, robust and cost-effective solutions, which includes:"
+#~ msgstr "With experienced developers, Ecalon IT provides its  full-cycle web development for fast, scalable, robust and cost-effective solutions, which includes:"
+
+#~ msgid "New product design and development."
+#~ msgstr "New product design and development."
+
+#~ msgid "Existing product re-design or refactoring."
+#~ msgstr "Existing product re-design or refactoring."
+
+#~ msgid "Implementation of Web 2.0 features."
+#~ msgstr "Implementation of Web 2.0 features."
+
+#~ msgid "Web security analyze and implementation."
+#~ msgstr "Web security analyze and implementation."
+
+#~ msgid "Mobile Apps"
+#~ msgstr "Mobile Apps"
+
+#~ msgid "Acknowledging the fact that mobile devices of all types are getting increasingly popular resulting in customers of today's world are on the move and they're using mobile application platforms to get there. Whether they use mobile phones, tablets, or other mobile devices they have all the information they need."
+#~ msgstr "Acknowledging the fact that mobile devices of all types are getting increasingly popular resulting in customers of today's world are on the move and they're using mobile application platforms to get there. Whether they use mobile phones, tablets, or other mobile devices they have all the information they need."
+
+#~ msgid "We are able to offer our clients a broad spectrum of mobile application development, design, and migration to other platforms, e.g.: "
+#~ msgstr "We are able to offer our clients a broad spectrum of mobile application development, design, and migration to other platforms, e.g.: "
+
+#~ msgid "Development of applications for all major mobile platforms."
+#~ msgstr "Development of applications for all major mobile platforms."
+
+#~ msgid "Re-engineering of mobile applications and performance optimization."
+#~ msgstr "Re-engineering of mobile applications and performance optimization."
+
+#~ msgid "Complex client-server solutions working with mobile apps."
+#~ msgstr "Complex client-server solutions working with mobile apps."
+
+#~ msgid "Gaming applications."
+#~ msgstr "Gaming applications."
+
+#~ msgid "Middleware"
+#~ msgstr "Middleware"
+
+#~ msgid "Middleware has emerged as a critical second level of the enterprise IT infrastructure, between the network and application levels. The need for middleware stems from the increasing growth in the number of applications and in the customizations within those applications."
+#~ msgstr "Middleware has emerged as a critical second level of the enterprise IT infrastructure, between the network and application levels. The need for middleware stems from the increasing growth in the number of applications and in the customizations within those applications."
+
+#~ msgid "Ecalon IT provides its clients with middleware solutions needed to maintain or improve their competitive edge, reduce costs, and enhance service levels with e.g.:"
+#~ msgstr "Ecalon IT provides its clients with middleware solutions needed to maintain or improve their competitive edge, reduce costs, and enhance service levels with e.g.:"
+
+#~ msgid "Link newer applications to older legacy systems."
+#~ msgstr "Link newer applications to older legacy systems."
+
+#~ msgid "Enterprise application integration."
+#~ msgstr "Enterprise application integration."
+
+#~ msgid "Message oriented middleware (MOM)."
+#~ msgstr "Message oriented middleware (MOM)."
+
+#~ msgid "Object request brokers (ORBs)."
+#~ msgstr "Object request brokers (ORBs)."
+
+#~ msgid "Enterprise service bus (ESB)."
+#~ msgstr "Enterprise service bus (ESB)."
+
+#~ msgid "Backend"
+#~ msgstr "Backend"
+
+#~ msgid "Backend solutions ties together multiple business patterns or integrates applications and data within an individual business pattern. Typical backend solutions include database management systems (DBMSs), messaging systems, legacy gateways, and network management systems."
+#~ msgstr "Backend solutions ties together multiple business patterns or integrates applications and data within an individual business pattern. Typical backend solutions include database management systems (DBMSs), messaging systems, legacy gateways, and network management systems."
+
+#~ msgid "We understand both the applications and the frontend additions so we can deliver a backend integration solution custom tailored for your environment, such as:"
+#~ msgstr "We understand both the applications and the frontend additions so we can deliver a backend integration solution custom tailored for your environment, such as:"
+
+#~ msgid "Database integration."
+#~ msgstr "Database integration."
+
+#~ msgid "Backend as a Service (Baas)."
+#~ msgstr "Backend as a Service (Baas)."
+
+#~ msgid "Process / workflow integration."
+#~ msgstr "Process / workflow integration."
+
+#~ msgid "Business Intelligence (BI)."
+#~ msgstr "Business Intelligence (BI)."
+
+#~ msgid "Security solutions."
+#~ msgstr "Security solutions."
+
+#~ msgid "Frontend"
+#~ msgstr "Frontend"
+
+#~ msgid "Innovative service design and channel solutions help you to digitize the front of your solution (application) for improved management of user interactions. Resulting in reduced cost-to-serve, increased user intimacy, as well as user loyalty."
+#~ msgstr "Innovative service design and channel solutions help you to digitize the front of your solution (application) for improved management of user interactions. Resulting in reduced cost-to-serve, increased user intimacy, as well as user loyalty."
+
+#~ msgid "We know how to add value and great user experience to your business from vision to execution principal in the following areas:"
+#~ msgstr "We know how to add value and great user experience to your business from vision to execution principal in the following areas:"
+
+#~ msgid "User Centered Design (UCD)."
+#~ msgstr "User Centered Design (UCD)."
+
+#~ msgid "Multi-Channel services design."
+#~ msgstr "Multi-Channel services design."
+
+#~ msgid "BEM methodology implementation."
+#~ msgstr "BEM methodology implementation."
+
+#~ msgid "Customer interaction management."
+#~ msgstr "Customer interaction management."
+
+#~ msgid "Open Source"
+#~ msgstr "Open Source"
+
+#~ msgid "Open source software provides excellent functionality and flexibility, at little or no cost, enabling enterprise and startup businesses to gain a competitive edge and foster innovation."
+#~ msgstr "Open source software provides excellent functionality and flexibility, at little or no cost, enabling enterprise and startup businesses to gain a competitive edge and foster innovation."
+
+#~ msgid "We firmly believe in the philosophy and economical approach to leveraging and customizing open source software to meet our clients' need. The benefits are many, e.g.:"
+#~ msgstr "We firmly believe in the philosophy and economical approach to leveraging and customizing open source software to meet our clients' need. The benefits are many, e.g.:"
+
+#~ msgid "Reduced development expenses or none."
+#~ msgstr "Reduced development expenses or none."
+
+#~ msgid "Flexibility for meeting specific needs."
+#~ msgstr "Flexibility for meeting specific needs."
+
+#~ msgid "Enhanced portability and scalability."
+#~ msgstr "Enhanced portability and scalability."
+
+#~ msgid "Long term customer support from wide user base."
+#~ msgstr "Long term customer support from wide user base."
+
+#~ msgid "Visuel Exposure"
+#~ msgstr "Visuel Exposure"
+
+#~ msgid "The benefits of having a professional design can be great, especially if your website is geared towards building your business. By improving the first impression for the user with a professional website design will definitely leave a better user experience."
+#~ msgstr "The benefits of having a professional design can be great, especially if your website is geared towards building your business. By improving the first impression for the user with a professional website design will definitely leave a better user experience."
+
+#~ msgid "Your website is a visual experience. Design evokes curiosity and creates familiarity for the user. We can offer help to focus your website content in an overall visual identity through:"
+#~ msgstr "Your website is a visual experience. Design evokes curiosity and creates familiarity for the user. We can offer help to focus your website content in an overall visual identity through:"
+
+#~ msgid "Graphical layout."
+#~ msgstr "Graphical layout."
+
+#~ msgid "Animation, Motion graphics and Stop Motion."
+#~ msgstr "Animation, Motion graphics and Stop Motion."
+
+#~ msgid "Short presentation-videos for internal or external use."
+#~ msgstr "Short presentation-videos for internal or external use."
+
+#~ msgid "Logo Design."
+#~ msgstr "Logo Design."
+
+#~ msgid "Streaming Solutions"
+#~ msgstr "Streaming Solutions"
+
+#~ msgid "There are numerous benefits that can be gained by employing a streaming solution to your company or concept, such as making live announcements, host online meetings, or spread awareness about various events to promote your services or products."
+#~ msgstr "There are numerous benefits that can be gained by employing a streaming solution to your company or concept, such as making live announcements, host online meetings, or spread awareness about various events to promote your services or products."
+
+#~ msgid "We are able to deliver cost-effective custom streaming solutions based on open source technologies, where benefits may include:"
+#~ msgstr "We are able to deliver cost-effective custom streaming solutions based on open source technologies, where benefits may include:"
+
+#~ msgid "Reduced costs."
+#~ msgstr "Reduced costs."
+
+#~ msgid "Wider audiences."
+#~ msgstr "Wider audiences."
+
+#~ msgid "Increased revenue."
+#~ msgstr "Increased revenue."
+
+#~ msgid "Richer content."
+#~ msgstr "Richer content."
+
+#~ msgid "HTML5 Template"
+#~ msgstr "HTML5 Template"
+
+#~ msgid "The below templates are only meant as inspiration for new custom made or re-design of solutions and not for sale."
+#~ msgstr "The below templates are only meant as inspiration for new custom made or re-design of solutions and not for sale."
+
+#~ msgid "You may either consider one single template for your new project or choose different sections from more than one template. The templates / designs are suitable for e.g.:"
+#~ msgstr "You may either consider one single template for your new project or choose different sections from more than one template. The templates / designs are suitable for e.g.:"
+
+#~ msgid "Online Web<br/>Solutions"
+#~ msgstr "Online Web<br/>Solutions"
+
+#~ msgid "Mobile Apps<br/>(Responsive)"
+#~ msgstr "Mobile Apps<br/>(Responsive)"
+
+#~ msgid "Backend Admin<br/>Solutions"
+#~ msgstr "Backend Admin<br/>Solutions"
+
+#~ msgid "Popular"
+#~ msgstr "Popular"
+
+#~ msgid "Search"
+#~ msgstr "Search"
+
+#~ msgid "A 404 error occurred"
+#~ msgstr "A 404 error occurred"
+
+#~ msgid "The requested controller was unable to dispatch the request."
+#~ msgstr "The requested controller was unable to dispatch the request."
+
+#~ msgid "The requested controller could not be mapped to an existing controller class."
+#~ msgstr "The requested controller could not be mapped to an existing controller class."
+
+#~ msgid "The requested controller was not dispatchable."
+#~ msgstr "The requested controller was not dispatchable."
+
+#~ msgid "The requested URL could not be matched by routing."
+#~ msgstr "The requested URL could not be matched by routing."
+
+#~ msgid "We cannot determine at this time why a 404 was generated."
+#~ msgstr "We cannot determine at this time why a 404 was generated."
+
+#~ msgid "Controller"
+#~ msgstr "Controller"
+
+#~ msgid "resolves to %s"
+#~ msgstr "resolves to %s"
+
+#~ msgid "Additional information"
+#~ msgstr "Additional information"
+
+#~ msgid "File"
+#~ msgstr "File"
+
+#~ msgid "Stack trace"
+#~ msgstr "Stack trace"
+
+#~ msgid "Previous exceptions"
+#~ msgstr "Previous exceptions"
+
+#~ msgid "No Exception available"
+#~ msgstr "No Exception available"
+
+#~ msgid "An error occurred"
+#~ msgstr "An error occurred"
+
+#~ msgid "Password"
+#~ msgstr "Password"
+
+#~ msgid "Remember Me"
+#~ msgstr "Remember Me"
+
+#~ msgid "Close"
+#~ msgstr "Close"
+
+#~ msgid "Providing IT Consultancy Services & Solutions"
+#~ msgstr "Providing IT Consultancy Services & Solutions"
+
+#~ msgid "Latest Articles"
+#~ msgstr "Latest Articles"
+
+#~ msgid "Random Templates"
+#~ msgstr "Random Templates"
+
+#~ msgid "Ecalon Group"
+#~ msgstr "Ecalon Group"
+
+#~ msgid "All rights reserved."
+#~ msgstr "All rights reserved."
+
+#~ msgid "TemplatesHTML5"
+#~ msgstr "TemplatesHTML5"
+
+#~ msgid "TemplatesWordPress"
+#~ msgstr "TemplatesWordPress"
+
+#~ msgid "TemplatesJoomla"
+#~ msgstr "TemplatesJoomla"
+
+#~ msgid "TemplatesMagento"
+#~ msgstr "TemplatesMagento"
+
+#~ msgid "Consultant"
+#~ msgstr "Consultant"
+
+#~ msgid "After Effects"
+#~ msgstr "After Effects"
+
+#~ msgid "Eye Candy Film"
+#~ msgstr "Eye Candy Film"
+
+#~ msgid "Copenhagen University"
+#~ msgstr "Copenhagen University"
+
+#~ msgid "Download"
+#~ msgstr "Download"
+
+#~ msgid "Joomla"
+#~ msgstr "Joomla"
+
+#~ msgid "Magento"
+#~ msgstr "Magento"
+
+#~ msgid "HTML5 Templates"
+#~ msgstr "HTML5 Templates"
+
+#~ msgid "Joomla Templates"
+#~ msgstr "Joomla Templates"
+
+#~ msgid "WordPress Template"
+#~ msgstr "WordPress Template"
+
+#~ msgid "WordPress Templates"
+#~ msgstr "WordPress Templates"
+
+#~ msgid "Address"
+#~ msgstr "Address"
+
+#~ msgid "website_launch_date"
+#~ msgstr "14-02-2014"
+
+#~ msgid "Website Launch"
+#~ msgstr "Website Launch"
+
+#~ msgid "We are pleased to announce the launch of our website."
+#~ msgstr "We are pleased to announce the launch of our website."
+
+#~ msgid "QA"
+#~ msgstr "QA"
+
+#~ msgid "Seam"
+#~ msgstr "Seam"
+
+#~ msgid "Junior Consultant"
+#~ msgstr "Junior Consultant"
+
+#~ msgid "Libraries"
+#~ msgstr "Libraries"
+
+#~ msgid "Certifications"
+#~ msgstr "Certifications"
+
+#~ msgid "NebulaNet LTD."
+#~ msgstr "NebulaNet LTD."
+
+#~ msgid "01-12-2013"
+#~ msgstr "01-01-2014"
+
+#~ msgid "Graphics & Videos"
+#~ msgstr "Graphics & Videos"
+
+#~ msgid "Systems"
+#~ msgstr "Systems"
+
+#~ msgid "Clients"
+#~ msgstr "Clients"
