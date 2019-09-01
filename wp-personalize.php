@@ -26,7 +26,7 @@ define( 'WWP_PLUGIN_LANG_DOMAIN', 'wp-personalize' );
 define( 'WWP_PLUGIN_DISPLAY_NAME', __( 'WP Personalize', WWP_PLUGIN_LANG_DOMAIN ) );
 define( 'WWP_PLUGIN_TITLE_NAME', __( 'WP Personalize Editor', WWP_PLUGIN_LANG_DOMAIN ) );
 define( 'WWP_NONCE_NAME', 'wp-personalize-nonce' );
-define( 'WWP_NONCE_VAR', 'wwpAjax' );
+define( 'WWP_NONCE_VAR', 'wpPersonalize' );
 
 // Variables
 $scriptSiteArr = get_option( 'wp_personalize_script_arr', array() );
@@ -166,11 +166,9 @@ function wppLoadList() {
 	die();
 }
 function wppUpdateScript() {
-	global $scriptSiteArr, $scriptNetArr, $isAdmin, $isNetworkAdmin, $isSuperAdmin, $isNetworkAdmin;
-
 	check_ajax_referer( WWP_NONCE_NAME, 'ajax_nonce' );
 
-	// @todo Nonce Check;
+	global $scriptSiteArr, $scriptNetArr, $isAdmin, $isNetworkAdmin, $isSuperAdmin, $isNetworkAdmin;
 	$post = $_POST;
 
 	if ( $isSuperAdmin and $isNetworkAdmin ) {
@@ -204,12 +202,15 @@ function wppUpdateScript() {
 	die();
 }
 function wppUpdateSettings() {
+	check_ajax_referer( WWP_NONCE_NAME, 'ajax_nonce' );
+
 	global $scriptSetArr, $isAdmin, $isNetworkAdmin, $isSuperAdmin, $isNetworkAdmin;
+	$post = $_POST;
 
 	if ( $isSuperAdmin and $isNetworkAdmin ) {
-		$scriptSetArr['location'] = $_POST['location'];
-		$scriptSetArr['type']     = $_POST['type'];
-		$scriptSetArr['area']     = $_POST['area'];
+		$scriptSetArr['location'] = $post['location'];
+		$scriptSetArr['type']     = $post['type'];
+		$scriptSetArr['area']     = $post['area'];
 
 		$result = update_site_option( 'wp_personalize_script_set_arr', $scriptSetArr );
 	} else {
@@ -225,7 +226,10 @@ function wppUpdateSettings() {
 	die();
 }
 function wppLoadScript() {
+	check_ajax_referer( WWP_NONCE_NAME, 'ajax_nonce' );
+
 	global $scriptSiteArr, $scriptNetArr, $isSuperAdmin, $isNetworkAdmin;
+	$post = $_POST;
 
 	if ( $isSuperAdmin and $isNetworkAdmin ) {
 		$scriptArr = $scriptNetArr;
@@ -233,19 +237,22 @@ function wppLoadScript() {
 		$scriptArr = $scriptSiteArr;
 	}
 
-	$scriptArr[ trim( $_POST['title'] ) ]['code'] = stripslashes( $scriptArr[ trim( $_POST['title'] ) ]['code'] );
-	echo json_encode( $scriptArr[ trim( $_POST['title'] ) ] );
+	$scriptArr[ trim( $post['title'] ) ]['code'] = stripslashes( $scriptArr[ trim( $post['title'] ) ]['code'] );
+	echo json_encode( $scriptArr[ trim( $post['title'] ) ] );
 
 	die();
 }
 function wppDeleteScript() {
+	check_ajax_referer( WWP_NONCE_NAME, 'ajax_nonce' );
+
 	global $scriptSiteArr, $scriptNetArr, $isSuperAdmin, $isNetworkAdmin;
+	$post = $_POST;
 
 	if ( $isSuperAdmin and $isNetworkAdmin ) {
-		unset( $scriptNetArr[ trim( $_POST['title'] ) ] );
+		unset( $scriptNetArr[ trim( $post['title'] ) ] );
 		$result = update_site_option( 'wp_personalize_script_net_arr', $scriptNetArr );
 	} else {
-		unset( $scriptSiteArr[ trim( $_POST['title'] ) ] );
+		unset( $scriptSiteArr[ trim( $post['title'] ) ] );
 		$result = update_option( 'wp_personalize_script_arr', $scriptSiteArr );
 	}
 
@@ -335,8 +342,20 @@ function wwp_get_allowed_protocols() {
 
 function hookAdminHeadScript() {
 	global $wpAdminHeadScript;
+	$pieces = wp_html_split( trim( $wpAdminHeadScript ) );
 
-	echo $wpAdminHeadScript;
+	foreach( $pieces as $key => $piece ) {
+		if( $piece === strip_tags( $piece ) ) {
+			echo esc_html( $piece );
+		}
+		echo ( $piece );
+	}
+
+	// var_dump( $thing );
+	// die();
+
+	// //@todo
+	// echo ( $wpAdminHeadScript );
 
 	hookBodyTopScript();
 }

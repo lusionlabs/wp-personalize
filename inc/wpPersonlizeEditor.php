@@ -14,7 +14,7 @@
 
 		$.ajaxSetup ({
 			cache: false,
-			ajax_nonce: wwpAjax.ajax_nonce
+			ajax_nonce: wpPersonalize.ajax_nonce
 		});
 
 		var lastRowID				= 0;
@@ -42,7 +42,8 @@
 
 		function loadScriptList() {
 			var postData = {
-				'action'	 : 'wpp_load_list'
+				'action'	 : 'wpp_load_list',
+				'ajax_nonce' : wpPersonalize.ajax_nonce
 			};
 
 			$.post(ajaxurl, postData, function(response) {
@@ -107,8 +108,9 @@
 			var script_title 	= $(this_obj).attr('scriptTitle');
 
 			var postData = {
-				'action'	: 'wpp_load_script',
-				'title'		:  script_title
+				'action'	 : 'wpp_load_script',
+				'title'		 : script_title,
+				'ajax_nonce' : wpPersonalize.ajax_nonce
 			};
 
 			$.post(ajaxurl, postData, function(response) {
@@ -163,13 +165,13 @@
 			$('.wpp-section-container').block({message: null});
 
 			var postData = {
-				'action'			: 'wpp_update_script',
-				'codeEditor'	: codeVal,
-				'location'		: $('#wpp-location').val(),
-				'type'				: $('#wpp-type').val(),
-				'area'				: $('#wpp-area').val(),
-				'title'				: $('#wpp-title').val(),
-				'ajax_nonce' : wwpAjax.ajax_nonce
+				'action'	 : 'wpp_update_script',
+				'codeEditor' : codeVal,
+				'location'   : $('#wpp-location').val(),
+				'type'		 : $('#wpp-type').val(),
+				'area'		 : $('#wpp-area').val(),
+				'title'		 : $('#wpp-title').val(),
+				'ajax_nonce' : wpPersonalize.ajax_nonce
 			};
 
 			$.post(ajaxurl, postData, function(response) {
@@ -241,8 +243,9 @@
 						$('.wpp-section-table').block({message: null});
 						var script_title = $(this_obj).attr('scriptTitle');
 						var postData = {
-							'action'	: 'wpp_delete_script',
-							'title'		:  script_title
+							'action'	 : 'wpp_delete_script',
+							'title'		 :  script_title,
+							'ajax_nonce' : wpPersonalize.ajax_nonce
 						};
 
 						$.post(ajaxurl, postData, function(response) {
