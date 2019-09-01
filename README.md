@@ -1,11 +1,11 @@
+# WP Personalize
+
 [![LusionLabs](https://img.shields.io/badge/lusionlabs-wordpress%20plugin-black)](https://lusionlabs.com)
-[![Build Status](https://img.shields.io/travis/lusionlabs/wp-personalize)](https://travis-ci.com/lusionlabs/wp-personalize)
 [![Plugin Version](https://img.shields.io/wordpress/plugin/v/wp-personalize)](https://wordpress.org/plugins/wp-personalize)
 [![WP Required](https://img.shields.io/wordpress/plugin/wp-version/wp-personalize?label=wp+required)](https://github.com/lusionlabs/wp-personalize/blob/master/readme.txt)
 [![WP Tested](https://img.shields.io/wordpress/plugin/tested/wp-personalize?label=wp+tested)](https://wordpress.org/plugins/wp-personalize)
 [![License](https://img.shields.io/github/license/lusionlabs/wp-present)](https://github.com/lusionlabs/wp-personalize/blob/master/LICENSE)
-
-# WP Personalize
+[![Build Status](https://img.shields.io/travis/lusionlabs/wp-personalize)](https://travis-ci.com/lusionlabs/wp-personalize)
 
 ## Description
 
