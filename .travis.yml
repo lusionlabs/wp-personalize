@@ -35,7 +35,7 @@ before_script:
   - composer install
   - export PATH="$HOME/.composer/vendor/bin:$PATH"
   - which composer
-  - ls -la "./vendor/bin"
+  - ./vendor/bin/phpcs --version
   # - which phpcs
   # - |
   #   if [ -f ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini ]; then
