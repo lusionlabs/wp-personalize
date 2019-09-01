@@ -1,13 +1,13 @@
-<script src="<?php echo plugin_dir_url( __FILE__ ) . 'codemirror/lib/codemirror.js'; ?>"></script>
-<link type="text/css" rel="stylesheet" href="<?php echo plugin_dir_url( __FILE__ ) . 'codemirror/lib/codemirror.css'; ?>">
-<script src="<?php echo plugin_dir_url( __FILE__ ) . 'codemirror/mode/javascript/javascript.js'; ?>"></script>
-<script src="<?php echo plugin_dir_url( __FILE__ ) . 'codemirror/addon/edit/matchbrackets.js'; ?>"></script>
-<script src="<?php echo plugin_dir_url( __FILE__ ) . 'codemirror/mode/htmlmixed/htmlmixed.js'; ?>"></script>
-<script src="<?php echo plugin_dir_url( __FILE__ ) . 'codemirror/mode/xml/xml.js'; ?>"></script>
-<script src="<?php echo plugin_dir_url( __FILE__ ) . 'codemirror/mode/javascript/javascript.js'; ?>"></script>
-<script src="<?php echo plugin_dir_url( __FILE__ ) . 'codemirror/mode/css/css.js'; ?>"></script>
-<script src="<?php echo plugin_dir_url( __FILE__ ) . 'codemirror/mode/clike/clike.js'; ?>"></script>
-<script src="<?php echo plugin_dir_url( __FILE__ ) . 'codemirror/mode/php/php.js'; ?>"></script>
+<script src="<?php echo esc_url( plugin_dir_url( __FILE__ ) ) . 'codemirror/lib/codemirror.js'; ?>"></script>
+<link type="text/css" rel="stylesheet" href="<?php echo esc_url( plugin_dir_url( __FILE__ ) ) . 'codemirror/lib/codemirror.css'; ?>">
+<script src="<?php echo esc_url( plugin_dir_url( __FILE__ ) ) . 'codemirror/mode/javascript/javascript.js'; ?>"></script>
+<script src="<?php echo esc_url( plugin_dir_url( __FILE__ ) ) . 'codemirror/addon/edit/matchbrackets.js'; ?>"></script>
+<script src="<?php echo esc_url( plugin_dir_url( __FILE__ ) ) . 'codemirror/mode/htmlmixed/htmlmixed.js'; ?>"></script>
+<script src="<?php echo esc_url( plugin_dir_url( __FILE__ ) ) . 'codemirror/mode/xml/xml.js'; ?>"></script>
+<script src="<?php echo esc_url( plugin_dir_url( __FILE__ ) ) . 'codemirror/mode/javascript/javascript.js'; ?>"></script>
+<script src="<?php echo esc_url( plugin_dir_url( __FILE__ ) ) . 'codemirror/mode/css/css.js'; ?>"></script>
+<script src="<?php echo esc_url( plugin_dir_url( __FILE__ ) ) . 'codemirror/mode/clike/clike.js'; ?>"></script>
+<script src="<?php echo esc_url( plugin_dir_url( __FILE__ ) ) . 'codemirror/mode/php/php.js'; ?>"></script>
 
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
@@ -405,7 +405,7 @@
 	<table class="wpp-section-table">
 		<thead>
 			<tr>
-				<th><?php echo $titleName; ?></th>
+				<th><?php echo esc_html( $titleName ); ?></th>
 				<th><?php esc_html_e( 'Control Panel', WWP_PLUGIN_LANG_DOMAIN ); ?></th>
 			</tr>
 		</thead>
@@ -466,7 +466,7 @@
 								<i class="whhg-php"></i>
 							</button>
 						<?php endif; ?>
-						<font class="wpp-subsection-create-network"><?php echo $createNetworkTxt; ?></font>
+						<font class="wpp-subsection-create-network"><?php echo esc_html( $createNetworkTxt ); ?></font>
 					</div>
 				</td>
 				<td>
@@ -482,7 +482,7 @@
 										<option value=""><?php esc_html_e( 'Location', WWP_PLUGIN_LANG_DOMAIN ); ?></option>
 										<?php foreach ( $locationArr as $key => $value ) : ?>
 											<?php if ( ! isset( $scriptSetArr['location'][ $key ] ) or $scriptSetArr['location'][ $key ] == 'true' or ( $isNetworkAdmin and $isSuperAdmin ) ) : ?>
-												<option value="<?php echo $key; ?>"><?php echo $value; ?></option>
+												<option value="<?php echo esc_attr( $key ); ?>"><?php echo esc_html( $value ); ?></option>
 											<?php endif; ?>
 										<?php endforeach; ?>
 									</select>
@@ -492,7 +492,7 @@
 										<option value=""><?php esc_html_e( 'Type', WWP_PLUGIN_LANG_DOMAIN ); ?></option>
 										<?php foreach ( $typeArr as $key => $value ) : ?>
 											<?php if ( ! isset( $scriptSetArr['type'][ $key ] ) or $scriptSetArr['type'][ $key ] == 'true' or ( $isNetworkAdmin and $isSuperAdmin ) ) : ?>
-												<option value="<?php echo $key; ?>"><?php echo $value; ?></option>
+												<option value="<?php echo esc_attr( $key ); ?>"><?php echo esc_html( $value ); ?></option>
 											<?php endif; ?>
 										<?php endforeach; ?>
 									</select>
@@ -502,7 +502,7 @@
 										<option value=""><?php esc_html_e( 'Area', WWP_PLUGIN_LANG_DOMAIN ); ?></option>
 										<?php foreach ( $areaArr as $key => $value ) : ?>
 											<?php if ( ! isset( $scriptSetArr['area'][ $key ] ) or $scriptSetArr['area'][ $key ] == 'true' or ( $isNetworkAdmin and $isSuperAdmin ) ) : ?>
-												<option value="<?php echo $key; ?>"><?php echo $value; ?></option>
+												<option value="<?php echo esc_attr( $key ); ?>"><?php echo esc_html( $value ); ?></option>
 											<?php endif; ?>
 										<?php endforeach; ?>
 									</select>

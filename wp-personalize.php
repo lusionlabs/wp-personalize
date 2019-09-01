@@ -61,8 +61,10 @@ $wpAdminBodyFootScript = '';
 $isAdmin               = is_admin();
 $isNetworkAdmin        = is_network_admin();
 $isSuperAdmin          = false;
+
 // Is network admin AJAX request hack
-if ( defined( 'DOING_AJAX' ) && DOING_AJAX && is_multisite() && preg_match( '#^' . network_admin_url() . '#i', $_SERVER['HTTP_REFERER'] ) ) {
+$http_referer = isset( $_SERVER['HTTP_REFERER'] ) ? sanitize_text_field( wp_unslash( $_SERVER['HTTP_REFERER'] ) ) : '';
+if ( defined( 'DOING_AJAX' ) && DOING_AJAX && is_multisite() && preg_match( '#^' . network_admin_url() . '#i', $http_referer ) ) {
 	$isNetworkAdmin = true;
 }
 handleScripts( $scriptSiteArr );
@@ -96,6 +98,7 @@ function wppLoadScriptsStyles() {
 	wp_register_style( WWP_PLUGIN_NAME . '-whhg', plugins_url( '/css/whhg.css', __FILE__ ) );
 	wp_register_style( WWP_PLUGIN_NAME . '-jquery-ui', plugins_url( '/css/jquery-ui.css', __FILE__ ) );
 
+	wp_enqueue_script( 'jQuery' );
 	wp_enqueue_script( WWP_PLUGIN_NAME . '-admin' );
 	wp_enqueue_script( WWP_PLUGIN_NAME . '-blockUI' );
 	wp_enqueue_style( WWP_PLUGIN_NAME . '-admin' );
@@ -155,23 +158,26 @@ function wppLoadList() {
 function wppUpdateScript() {
 	global $scriptSiteArr, $scriptNetArr, $isAdmin, $isNetworkAdmin, $isSuperAdmin, $isNetworkAdmin;
 
+	// @todo Nonce Check;
+	$post = $_POST;
+
 	if ( $isSuperAdmin and $isNetworkAdmin ) {
-		$scriptNetArr[ trim( $_POST['title'] ) ] = array(
-			'title'    => $_POST['title'],
-			'location' => $_POST['location'],
-			'type'     => $_POST['type'],
-			'area'     => $_POST['area'],
-			'code'     => $_POST['codeEditor'],
+		$scriptNetArr[ trim( $post['title'] ) ] = array(
+			'title'    => $post['title'],
+			'location' => $post['location'],
+			'type'     => $post['type'],
+			'area'     => $post['area'],
+			'code'     => $post['codeEditor'],
 		);
 
 		$result = update_site_option( 'wp_personalize_script_net_arr', $scriptNetArr );
 	} else {
-		$scriptSiteArr[ trim( $_POST['title'] ) ] = array(
-			'title'    => $_POST['title'],
-			'location' => $_POST['location'],
-			'type'     => $_POST['type'],
-			'area'     => $_POST['area'],
-			'code'     => $_POST['codeEditor'],
+		$scriptSiteArr[ trim( $post['title'] ) ] = array(
+			'title'    => $post['title'],
+			'location' => $post['location'],
+			'type'     => $post['type'],
+			'area'     => $post['area'],
+			'code'     => $post['codeEditor'],
 		);
 
 		$result = update_option( 'wp_personalize_script_arr', $scriptSiteArr );
@@ -304,16 +310,28 @@ function handleScripts( $scriptArr ) {
 		}//end switch
 	}//end foreach
 }
+
+function wwp_get_allowed_html() {
+	$allowed_html     = wp_kses_allowed_html( 'post' );
+	$htallowed_html[] = 'script';
+}
+function wwp_get_allowed_protocols() {
+	$protocols   = wp_allowed_protocols();
+	$protocols[] = 'javascript';
+	return $protocols;
+}
+
 function hookAdminHeadScript() {
 	global $wpAdminHeadScript;
 
 	echo $wpAdminHeadScript;
+
 	hookBodyTopScript();
 }
 function hookHeadScript() {
 	global $wpHeadScript;
 
-	echo $wpHeadScript;
+	echo esc_html( $wpHeadScript );
 	hookBodyTopScript();
 }
 function hookBodyTopScript() {
@@ -322,21 +340,19 @@ function hookBodyTopScript() {
 	$wpBodyTopScript = addslashes( $wpBodyTopScript );
 	$wpBodyTopScript = str_replace( '</', '<\/', $wpBodyTopScript );
 	$wpBodyTopScript = str_replace( array( "\r", "\n" ), '', $wpBodyTopScript );
+
+	$js = wp_unslash( $wpBodyTopScript );
 	?>
-	<script type="text/javascript">
-		jQuery(document).ready( function($) {
-			$('body').prepend('<?php echo $wpBodyTopScript; ?>');
-		});
-	</script>
+
 	<?php
 }
 function hookAdminBodyFootScript() {
 	global $wpAdminBodyFootScript;
 
-	echo $wpAdminBodyFootScript;
+	echo esc_html( $wpAdminBodyFootScript );
 }
 function hookBodyFootScript() {
 	global $wpBodyFootScript;
 
-	echo $wpBodyFootScript;
+	echo esc_html( $wpBodyFootScript );
 }
