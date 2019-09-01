@@ -18,4 +18,3 @@ $createNetworkTxt = '';
 
 <?php
 require_once 'wpPersonlizeEditor.php';
-?>
