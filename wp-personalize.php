@@ -20,11 +20,14 @@
  */
 
 // Constants
+define( 'WWP_PLUGIN_VERSION', '2.0.0' );
 define( 'WWP_PLUGIN_NAME', 'wp-personalize' );
 define( 'WWP_PLUGIN_LANG_DOMAIN', 'wp-personalize' );
 define( 'WWP_PLUGIN_DISPLAY_NAME', __( 'WP Personalize', WWP_PLUGIN_LANG_DOMAIN ) );
 define( 'WWP_PLUGIN_TITLE_NAME', __( 'WP Personalize Editor', WWP_PLUGIN_LANG_DOMAIN ) );
-define( 'WWP_PLUGIN_VERSION', '2.0.0' );
+define( 'WWP_NONCE_NAME', 'wp-personalize-nonce' );
+define( 'WWP_NONCE_VAR', 'wwpAjax' );
+
 // Variables
 $scriptSiteArr = get_option( 'wp_personalize_script_arr', array() );
 $scriptNetArr  = get_site_option( 'wp_personalize_script_net_arr', array() );
@@ -71,6 +74,7 @@ handleScripts( $scriptSiteArr );
 if ( ! $isNetworkAdmin ) {
 	handleScripts( $scriptNetArr );
 }
+
 add_filter( 'wp_head', 'hookHeadScript', 999, 0 );
 add_filter( 'admin_head', 'hookAdminHeadScript', 999, 0 );
 add_filter( 'wp_footer', 'hookBodyFootScript', 999, 0 );
@@ -104,6 +108,12 @@ function wppLoadScriptsStyles() {
 	wp_enqueue_style( WWP_PLUGIN_NAME . '-admin' );
 	wp_enqueue_style( WWP_PLUGIN_NAME . '-whhg' );
 	wp_enqueue_style( WWP_PLUGIN_NAME . '-jquery-ui' );
+
+	$nonce_params = array(
+		'ajaxurl'    => admin_url( 'admin-ajax.php' ),
+		'ajax_nonce' => wp_create_nonce( WWP_NONCE_NAME ),
+	);
+	  wp_localize_script( WWP_PLUGIN_NAME . '-admin', WWP_NONCE_VAR, $nonce_params );
 }
 function wppActivation() {
 	update_option( WWP_PLUGIN_NAME, WWP_PLUGIN_VERSION );
@@ -157,6 +167,8 @@ function wppLoadList() {
 }
 function wppUpdateScript() {
 	global $scriptSiteArr, $scriptNetArr, $isAdmin, $isNetworkAdmin, $isSuperAdmin, $isNetworkAdmin;
+
+	check_ajax_referer( WWP_NONCE_NAME, 'ajax_nonce' );
 
 	// @todo Nonce Check;
 	$post = $_POST;

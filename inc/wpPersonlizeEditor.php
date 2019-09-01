@@ -11,7 +11,11 @@
 
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
-		$.ajaxSetup ({cache: false});
+
+		$.ajaxSetup ({
+			cache: false,
+			ajax_nonce: wwpAjax.ajax_nonce
+		});
 
 		var lastRowID				= 0;
 		var lastScriptCode	= '';
@@ -38,7 +42,7 @@
 
 		function loadScriptList() {
 			var postData = {
-				'action'			: 'wpp_load_list'
+				'action'	 : 'wpp_load_list'
 			};
 
 			$.post(ajaxurl, postData, function(response) {
@@ -164,7 +168,8 @@
 				'location'		: $('#wpp-location').val(),
 				'type'				: $('#wpp-type').val(),
 				'area'				: $('#wpp-area').val(),
-				'title'				: $('#wpp-title').val()
+				'title'				: $('#wpp-title').val(),
+				'ajax_nonce' : wwpAjax.ajax_nonce
 			};
 
 			$.post(ajaxurl, postData, function(response) {
