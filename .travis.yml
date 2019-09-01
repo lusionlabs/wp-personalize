@@ -12,7 +12,6 @@ branches:
   only:
     - master
     - develop
-    - fix/wordpress-coding-standards
 
 cache:
   directories:
@@ -23,13 +22,11 @@ matrix:
     # - php: 5.6
     #   env: WP_VERSION=latest WP_MULTISITE=0 WP_TRAVISCI=travis:phpunit
     # - php: 7.2
-    #   env: WP_VERSION=latest WP_MULTISITE=1 WP_TRAVISCI=travis:phpunit
+    #   env: WP_VERSION=latest WP_MULTISITE=1 WP_TRAVISCI=phpcs
     # - php: 5.6
     #   env: WP_TRAVISCI=travis:js-tests
-    - php: 7.2
-      env: WP_TRAVISCI=travis:php-lint
-
-
+    - php: 7.1
+      env: WP_VERSION=latest WP_MULTISITE=0 WP_TRAVISCI=phpcs
 
 before_script:
   - export PATH="$HOME/.composer/vendor/bin:$PATH"
@@ -47,7 +44,8 @@ before_script:
   - |
     if [[ "$WP_TRAVISCI" == "phpcs" ]] ; then
       composer global require wp-coding-standards/wpcs
-      phpcs --config-set installed_paths $HOME/.composer/vendor/wp-coding-standards/wpcs
+      composer global require phpcompatibility/php-compatibility
+      phpcs --config-set installed_paths $HOME/.composer/vendor/wp-coding-standards/wpcs, $HOME/.composer/vendor/phpcompatibility/php-compatibility
     fi
 
 script:
@@ -58,5 +56,5 @@ script:
     fi
   - |
     if [[ "$WP_TRAVISCI" == "phpcs" ]] ; then
-      phpcs
+      phpcs --show-config
     fi
