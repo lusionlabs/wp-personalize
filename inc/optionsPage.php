@@ -13,7 +13,7 @@ $createNetworkTxt = '';
 
 <h3 class="wpp-section-top-title">
 	<i class="whhg-code wpp-section-top-icon"></i>
-	<?php echo $displayName; ?>
+	<?php echo esc_html( $displayName ); ?>
 </h3>
 
 <?php

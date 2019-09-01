@@ -14,14 +14,14 @@ $createNetworkTxt = '(' . __( 'Network', WWP_PLUGIN_LANG_DOMAIN ) . ')';
 
 <h3 class="wpp-section-top-title">
 	<i class="whhg-code wpp-section-top-icon"></i>
-	<?php echo $displayName; ?>
+	<?php echo esc_html( $displayName ); ?>
 </h3>
 
 <div class="wpp-section-settings-container">
 	<table class="wpp-section-table">
 		<thead>
 			<tr>
-				<th><?php echo $titleSetName; ?></th>
+				<th><?php echo esc_html( $titleSetName ); ?></th>
 				<th><?php esc_html_e( 'Settings', WWP_PLUGIN_LANG_DOMAIN ); ?></th>
 			</tr>
 		</thead>
@@ -33,8 +33,8 @@ $createNetworkTxt = '(' . __( 'Network', WWP_PLUGIN_LANG_DOMAIN ) . ')';
 				<td>
 					<?php foreach ( $locationArr as $key => $value ) : ?>
 						<?php $locationChecked = ( ! isset( $scriptSetArr['location'][ $key ] ) or $scriptSetArr['location'][ $key ] == 'true' ) ? ' checked' : ''; ?>
-						<input name="loccaion[]" class="check-location" type="checkbox" value="<?php echo $key; ?>"<?php echo $locationChecked; ?> />
-						<?php echo $value; ?><br/>
+						<input name="loccaion[]" class="check-location" type="checkbox" value="<?php echo esc_attr( $key ); ?>"<?php echo esc_attr( $locationChecked ); ?> />
+						<?php echo esc_html( $value ); ?><br/>
 					<?php endforeach; ?>
 				</td>
 			</tr>
@@ -45,8 +45,8 @@ $createNetworkTxt = '(' . __( 'Network', WWP_PLUGIN_LANG_DOMAIN ) . ')';
 				<td>
 					<?php foreach ( $typeArr as $key => $value ) : ?>
 						<?php $typeChecked = ( ! isset( $scriptSetArr['type'][ $key ] ) or $scriptSetArr['type'][ $key ] == 'true' ) ? ' checked' : ''; ?>
-						<input name="type[]" class="check-type" type="checkbox" value="<?php echo $key; ?>"<?php echo $typeChecked; ?> />
-						<?php echo $value; ?><br/>
+						<input name="type[]" class="check-type" type="checkbox" value="<?php echo esc_attr( $key ); ?>"<?php echo esc_attr( $typeChecked ); ?> />
+						<?php echo esc_html( $value ); ?><br/>
 					<?php endforeach; ?>
 				</td>
 			</tr>
@@ -57,8 +57,8 @@ $createNetworkTxt = '(' . __( 'Network', WWP_PLUGIN_LANG_DOMAIN ) . ')';
 				<td>
 					<?php foreach ( $areaArr as $key => $value ) : ?>
 						<?php $areaChecked = ( ! isset( $scriptSetArr['area'][ $key ] ) or $scriptSetArr['area'][ $key ] == 'true' ) ? ' checked' : ''; ?>
-						<input name="area[]" class="check-area" type="checkbox" value="<?php echo $key; ?>"<?php echo $areaChecked; ?> />
-						<?php echo $value; ?><br/>
+						<input name="area[]" class="check-area" type="checkbox" value="<?php echo esc_attr( $key ); ?>"<?php echo esc_attr( $areaChecked ); ?> />
+						<?php echo esc_html( $value ); ?><br/>
 					<?php endforeach; ?>
 				</td>
 			</tr>
