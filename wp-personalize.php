@@ -25,7 +25,6 @@ define( 'WWP_PLUGIN_LANG_DOMAIN', 'wp-personalize' );
 define( 'WWP_PLUGIN_DISPLAY_NAME', __( 'WP Personalize', WWP_PLUGIN_LANG_DOMAIN ) );
 define( 'WWP_PLUGIN_TITLE_NAME', __( 'WP Personalize Editor', WWP_PLUGIN_LANG_DOMAIN ) );
 define( 'WWP_PLUGIN_VERSION', '2.0.0' );
-
 // Variables
 $scriptSiteArr = get_option( 'wp_personalize_script_arr', array() );
 $scriptNetArr  = get_site_option( 'wp_personalize_script_net_arr', array() );
@@ -50,10 +49,8 @@ $areaArr       = array(
 register_activation_hook( __FILE__, 'wppActivation' );
 register_deactivation_hook( __FILE__, 'wppDeactivation' );
 add_action( 'plugins_loaded', 'checkIsSuperAdmin' );
-
 // Admin script and styles
-add_action( 'adminesc_html_enqueue_scripts', 'wppLoadScriptsStyles' );
-
+add_action( 'admin_enqueue_scripts', 'wppLoadScriptsStyles' );
 // Load Scripts
 $wpHeadScript          = '';
 $wpAdminHeadScript     = '';
@@ -64,41 +61,34 @@ $wpAdminBodyFootScript = '';
 $isAdmin               = is_admin();
 $isNetworkAdmin        = is_network_admin();
 $isSuperAdmin          = false;
-
 // Is network admin AJAX request hack
 if ( defined( 'DOING_AJAX' ) && DOING_AJAX && is_multisite() && preg_match( '#^' . network_admin_url() . '#i', $_SERVER['HTTP_REFERER'] ) ) {
 	$isNetworkAdmin = true;
 }
-
 handleScripts( $scriptSiteArr );
 if ( ! $isNetworkAdmin ) {
 	handleScripts( $scriptNetArr );
 }
-
 add_filter( 'wp_head', 'hookHeadScript', 999, 0 );
 add_filter( 'admin_head', 'hookAdminHeadScript', 999, 0 );
 add_filter( 'wp_footer', 'hookBodyFootScript', 999, 0 );
 add_filter( 'admin_footer', 'hookAdminBodyFootScript', 999, 0 );
-
 // Ajax Hooks
 add_action( 'wp_ajax_wpp_load_list', 'wppLoadList' );
 add_action( 'wp_ajax_wpp_update_script', 'wppUpdateScript' );
 add_action( 'wp_ajax_wpp_update_settings', 'wppUpdateSettings' );
 add_action( 'wp_ajax_wpp_load_script', 'wppLoadScript' );
 add_action( 'wp_ajax_wpp_delete_script', 'wppDeleteScript' );
-
 // Menu Pages
 add_action( 'admin_menu', 'wppAddOptionsPage' );
 if ( is_multisite() ) {
 	add_action( 'network_admin_menu', 'wppAddNetworkOptionsPage' );
 }
-
 // Load Languages Files
 add_action( 'plugins_loaded', 'loadLangFiles' );
 function loadLangFiles() {
 	load_plugin_textdomain( WWP_PLUGIN_LANG_DOMAIN, false, basename( dirname( __FILE__ ) ) . '/lang' );
 }
-
 function wppLoadScriptsStyles() {
 	wp_register_script( WWP_PLUGIN_NAME . '-admin', plugins_url( '/js/admin.js', __FILE__ ), array( 'jquery-ui-dialog', 'jquery' ) );
 	wp_register_script( WWP_PLUGIN_NAME . '-blockUI', plugins_url( '/js/jquery.blockUI.js', __FILE__ ), array( 'jquery-ui-dialog', 'jquery' ) );
@@ -106,71 +96,62 @@ function wppLoadScriptsStyles() {
 	wp_register_style( WWP_PLUGIN_NAME . '-whhg', plugins_url( '/css/whhg.css', __FILE__ ) );
 	wp_register_style( WWP_PLUGIN_NAME . '-jquery-ui', plugins_url( '/css/jquery-ui.css', __FILE__ ) );
 
-	wpesc_html_enqueue_script( WWP_PLUGIN_NAME . '-admin' );
-	wpesc_html_enqueue_script( WWP_PLUGIN_NAME . '-blockUI' );
-	wpesc_html_enqueue_style( WWP_PLUGIN_NAME . '-admin' );
-	wpesc_html_enqueue_style( WWP_PLUGIN_NAME . '-whhg' );
-	wpesc_html_enqueue_style( WWP_PLUGIN_NAME . '-jquery-ui' );
+	wp_enqueue_script( WWP_PLUGIN_NAME . '-admin' );
+	wp_enqueue_script( WWP_PLUGIN_NAME . '-blockUI' );
+	wp_enqueue_style( WWP_PLUGIN_NAME . '-admin' );
+	wp_enqueue_style( WWP_PLUGIN_NAME . '-whhg' );
+	wp_enqueue_style( WWP_PLUGIN_NAME . '-jquery-ui' );
 }
-
 function wppActivation() {
 	update_option( WWP_PLUGIN_NAME, WWP_PLUGIN_VERSION );
 	if ( is_multisite() ) {
 		update_site_option( WWP_PLUGIN_NAME, WWP_PLUGIN_VERSION );
 	}
 }
-
 function wppDeactivation() {
 
 }
-
 function wppAddOptionsPage() {
 	add_options_page( WWP_PLUGIN_TITLE_NAME, WWP_PLUGIN_DISPLAY_NAME, 'manage_options', WWP_PLUGIN_NAME, 'wppOptionsPage' );
 }
-
 function wppAddNetworkOptionsPage() {
 	add_submenu_page( 'settings.php', WWP_PLUGIN_TITLE_NAME, WWP_PLUGIN_DISPLAY_NAME, 'manage_options', WWP_PLUGIN_NAME, 'wppNetworkOptionsPage' );
 }
-
 function wppOptionsPage() {
 	if ( ! current_user_can( 'manage_options' ) ) {
-		wp_die( esc_html_e( 'You do not have sufficient permissions to access this page.' ) );
+		wp_die( _e( 'You do not have sufficient permissions to access this page.' ) );
 	}
 
 	global $isNetworkAdmin, $isSuperAdmin, $scriptSiteArr, $scriptSetArr, $locationArr, $typeArr, $areaArr;
 	include_once WP_PLUGIN_DIR . '/' . WWP_PLUGIN_NAME . '/inc/optionsPage.php';
 }
-
 function wppNetworkOptionsPage() {
 	if ( ! current_user_can( 'manage_network_options' ) ) {
-		wp_die( esc_html_e( 'You do not have sufficient permissions to access this page.' ) );
+		wp_die( _e( 'You do not have sufficient permissions to access this page.' ) );
 	}
 
 	global $isNetworkAdmin, $isSuperAdmin, $scriptNetArr, $scriptSetArr, $locationArr, $typeArr, $areaArr;
 	include_once WP_PLUGIN_DIR . '/' . WWP_PLUGIN_NAME . '/inc/networkOptionsPage.php';
 }
-
 function checkIsSuperAdmin() {
 	global $isSuperAdmin;
 	if ( is_multisite() ) {
 		$isSuperAdmin = is_super_admin( wp_get_current_user() );
 	}
 }
-
 function wppLoadList() {
 	global $isSuperAdmin, $scriptSiteArr, $scriptNetArr, $isNetworkAdmin;
 
 	if ( $isSuperAdmin and $isNetworkAdmin ) {
 		$scriptNetArr = get_site_option( 'wp_personalize_script_net_arr', array() );
-		echo jsonesc_html_encode( $scriptNetArr );
+		echo json_encode( $scriptNetArr );
 	} else {
 		$scriptSiteArr = get_option( 'wp_personalize_script_arr', array() );
-		echo jsonesc_html_encode( $scriptSiteArr );
+		echo json_encode( $scriptSiteArr );
 	}
 
 	die();
 }
-
 function wppUpdateScript() {
 	global $scriptSiteArr, $scriptNetArr, $isAdmin, $isNetworkAdmin, $isSuperAdmin, $isNetworkAdmin;
 
@@ -197,14 +178,13 @@ function wppUpdateScript() {
 	}//end if
 
 	if ( $result ) {
-		echo jsonesc_html_encode( array( 'result' => 'true' ) );
+		echo json_encode( array( 'result' => 'true' ) );
 	} else {
-		echo jsonesc_html_encode( array( 'result' => 'false' ) );
+		echo json_encode( array( 'result' => 'false' ) );
 	}
 
 	die();
 }
-
 function wppUpdateSettings() {
 	global $scriptSetArr, $isAdmin, $isNetworkAdmin, $isSuperAdmin, $isNetworkAdmin;
 
@@ -219,14 +199,13 @@ function wppUpdateSettings() {
 	}
 
 	if ( $result ) {
-		echo jsonesc_html_encode( array( 'result' => 'true' ) );
+		echo json_encode( array( 'result' => 'true' ) );
 	} else {
-		echo jsonesc_html_encode( array( 'result' => 'false' ) );
+		echo json_encode( array( 'result' => 'false' ) );
 	}
 
 	die();
 }
-
 function wppLoadScript() {
 	global $scriptSiteArr, $scriptNetArr, $isSuperAdmin, $isNetworkAdmin;
 
@@ -237,11 +216,10 @@ function wppLoadScript() {
 	}
 
 	$scriptArr[ trim( $_POST['title'] ) ]['code'] = stripslashes( $scriptArr[ trim( $_POST['title'] ) ]['code'] );
-	echo jsonesc_html_encode( $scriptArr[ trim( $_POST['title'] ) ] );
+	echo json_encode( $scriptArr[ trim( $_POST['title'] ) ] );
 
 	die();
 }
-
 function wppDeleteScript() {
 	global $scriptSiteArr, $scriptNetArr, $isSuperAdmin, $isNetworkAdmin;
 
@@ -254,14 +232,13 @@ function wppDeleteScript() {
 	}
 
 	if ( $result ) {
-		echo jsonesc_html_encode( array( 'result' => 'true' ) );
+		echo json_encode( array( 'result' => 'true' ) );
 	} else {
-		echo jsonesc_html_encode( array( 'result' => 'false' ) );
+		echo json_encode( array( 'result' => 'false' ) );
 	}
 
 	die();
 }
-
 function handleScripts( $scriptArr ) {
 	global $wpHeadScript, $wpAdminHeadScript, $wpBodyTopScript, $wpBodyMidScript,
 				 $wpBodyFootScript, $wpAdminBodyFootScript, $isAdmin, $isNetworkAdmin;
@@ -327,22 +304,18 @@ function handleScripts( $scriptArr ) {
 		}//end switch
 	}//end foreach
 }
-
-
 function hookAdminHeadScript() {
 	global $wpAdminHeadScript;
 
 	echo $wpAdminHeadScript;
 	hookBodyTopScript();
 }
-
 function hookHeadScript() {
 	global $wpHeadScript;
 
 	echo $wpHeadScript;
 	hookBodyTopScript();
 }
-
 function hookBodyTopScript() {
 	global $wpBodyTopScript;
 
@@ -357,17 +330,13 @@ function hookBodyTopScript() {
 	</script>
 	<?php
 }
-
 function hookAdminBodyFootScript() {
 	global $wpAdminBodyFootScript;
 
 	echo $wpAdminBodyFootScript;
 }
-
 function hookBodyFootScript() {
 	global $wpBodyFootScript;
 
 	echo $wpBodyFootScript;
 }
-
-?>

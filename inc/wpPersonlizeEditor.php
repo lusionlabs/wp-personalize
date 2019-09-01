@@ -1,13 +1,13 @@
-<script src="<?php echo plugin_dir_url(__FILE__).'codemirror/lib/codemirror.js'; ?>"></script>
-<link type="text/css" rel="stylesheet" href="<?php echo plugin_dir_url(__FILE__) .'codemirror/lib/codemirror.css'; ?>">
-<script src="<?php echo plugin_dir_url(__FILE__).'codemirror/mode/javascript/javascript.js'; ?>"></script>
-<script src="<?php echo plugin_dir_url(__FILE__).'codemirror/addon/edit/matchbrackets.js'; ?>"></script>
-<script src="<?php echo plugin_dir_url(__FILE__).'codemirror/mode/htmlmixed/htmlmixed.js'; ?>"></script>
-<script src="<?php echo plugin_dir_url(__FILE__).'codemirror/mode/xml/xml.js'; ?>"></script>
-<script src="<?php echo plugin_dir_url(__FILE__).'codemirror/mode/javascript/javascript.js'; ?>"></script>
-<script src="<?php echo plugin_dir_url(__FILE__).'codemirror/mode/css/css.js'; ?>"></script>
-<script src="<?php echo plugin_dir_url(__FILE__).'codemirror/mode/clike/clike.js'; ?>"></script>
-<script src="<?php echo plugin_dir_url(__FILE__).'codemirror/mode/php/php.js'; ?>"></script>
+<script src="<?php echo plugin_dir_url( __FILE__ ) . 'codemirror/lib/codemirror.js'; ?>"></script>
+<link type="text/css" rel="stylesheet" href="<?php echo plugin_dir_url( __FILE__ ) . 'codemirror/lib/codemirror.css'; ?>">
+<script src="<?php echo plugin_dir_url( __FILE__ ) . 'codemirror/mode/javascript/javascript.js'; ?>"></script>
+<script src="<?php echo plugin_dir_url( __FILE__ ) . 'codemirror/addon/edit/matchbrackets.js'; ?>"></script>
+<script src="<?php echo plugin_dir_url( __FILE__ ) . 'codemirror/mode/htmlmixed/htmlmixed.js'; ?>"></script>
+<script src="<?php echo plugin_dir_url( __FILE__ ) . 'codemirror/mode/xml/xml.js'; ?>"></script>
+<script src="<?php echo plugin_dir_url( __FILE__ ) . 'codemirror/mode/javascript/javascript.js'; ?>"></script>
+<script src="<?php echo plugin_dir_url( __FILE__ ) . 'codemirror/mode/css/css.js'; ?>"></script>
+<script src="<?php echo plugin_dir_url( __FILE__ ) . 'codemirror/mode/clike/clike.js'; ?>"></script>
+<script src="<?php echo plugin_dir_url( __FILE__ ) . 'codemirror/mode/php/php.js'; ?>"></script>
 
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
@@ -15,9 +15,9 @@
 		
 		var lastRowID				= 0;
 		var lastScriptCode	= '';
-		var locationArr			= <?php echo json_encode($locationArr); ?>;
-		var typeArr					= <?php echo json_encode($typeArr); ?>;
-		var areaArr					= <?php echo json_encode($areaArr); ?>;
+		var locationArr			= <?php echo json_encode( $locationArr ); ?>;
+		var typeArr					= <?php echo json_encode( $typeArr ); ?>;
+		var areaArr					= <?php echo json_encode( $areaArr ); ?>;
 
 		var html_val 	= '<div>\n\n</div>';
 		var css_val 	= '<style type="text/css">\n\n</style>';
@@ -58,10 +58,10 @@
 						prependHTML += '<td class="wpp-cell-center">' + areaArr[obj.area] + '</td>';
 						prependHTML += '<td class="wpp-cell-center" style="white-space: nowrap;">';
 						prependHTML += '<button class="wpp-btn wpp-btn-sm wpp-btn-success btn-load-script" type="button" id="' + j + '" scriptTitle="' + obj.title + '">';
-						prependHTML += '	<?php _e("Load", WWP_PLUGIN_LANG_DOMAIN); ?>';
+						prependHTML += '	<?php _e( 'Load', WWP_PLUGIN_LANG_DOMAIN ); ?>';
 						prependHTML += '</button>&nbsp;';
 						prependHTML += '<button class="wpp-btn wpp-btn-sm wpp-btn-danger btn-delete-script" type="button" id="' + j + '" scriptTitle="' + obj.title + '">';
-						prependHTML += '	<?php _e("Delete", WWP_PLUGIN_LANG_DOMAIN); ?>';
+						prependHTML += '	<?php _e( 'Delete', WWP_PLUGIN_LANG_DOMAIN ); ?>';
 						prependHTML += '</button>';
 						prependHTML += '</td>';
 						prependHTML += '</tr>';
@@ -199,17 +199,17 @@
 			var codeVal 	= codeEditor.getValue();
 			var this_obj 	= this;
 			if (checkCodeEditorChanges(codeVal)) {
-				$("#wpp-dialog-confirm-body").html("<?php _e('You haven\'t saved your changes, proceed?', WWP_PLUGIN_LANG_DOMAIN); ?>");
+				$("#wpp-dialog-confirm-body").html("<?php _e( 'You haven\'t saved your changes, proceed?', WWP_PLUGIN_LANG_DOMAIN ); ?>");
 				$("#wpp-dialog-confirm").dialog({
 					resizable: false,
 					height: 140,
 					modal: true,
 					buttons: {
-						"<?php _e('Yes', WWP_PLUGIN_LANG_DOMAIN); ?>": function() {
+						"<?php _e( 'Yes', WWP_PLUGIN_LANG_DOMAIN ); ?>": function() {
 							$("#wpp-dialog-confirm").dialog("close");	
 							loadScript(this_obj);
 						},
-						"<?php _e('No', WWP_PLUGIN_LANG_DOMAIN); ?>": function() {
+						"<?php _e( 'No', WWP_PLUGIN_LANG_DOMAIN ); ?>": function() {
 							$("#wpp-dialog-confirm").dialog("close");	
 							return;			
 						}
@@ -225,13 +225,13 @@
 			var this_id		= this.id;
 			var this_obj	= this;
 			
-			$("#wpp-dialog-confirm-body").html("<?php _e('Are you sure?', WWP_PLUGIN_LANG_DOMAIN); ?>");
+			$("#wpp-dialog-confirm-body").html("<?php _e( 'Are you sure?', WWP_PLUGIN_LANG_DOMAIN ); ?>");
 			$("#wpp-dialog-confirm").dialog({
 				resizable: false,
 				height: 140,
 				modal: true,
 				buttons: {
-					"<?php _e('Yes', WWP_PLUGIN_LANG_DOMAIN); ?>": function() {
+					"<?php _e( 'Yes', WWP_PLUGIN_LANG_DOMAIN ); ?>": function() {
 						$("#wpp-dialog-confirm").dialog("close");
 						$('.wpp-section-table').block({message: null});
 						var script_title = $(this_obj).attr('scriptTitle');
@@ -254,7 +254,7 @@
 							}, 1000);
 						});
 					},
-					"<?php _e('No', WWP_PLUGIN_LANG_DOMAIN); ?>": function() {
+					"<?php _e( 'No', WWP_PLUGIN_LANG_DOMAIN ); ?>": function() {
 						$("#wpp-dialog-confirm").dialog("close");					
 					}
 				}
@@ -267,13 +267,13 @@
 			var this_obj 	= this;
 						
 			if (checkCodeEditorChanges(codeVal)) {
-				$("#wpp-dialog-confirm-body").html("<?php _e('You haven\'t saved your changes, proceed?', WWP_PLUGIN_LANG_DOMAIN); ?>");
+				$("#wpp-dialog-confirm-body").html("<?php _e( 'You haven\'t saved your changes, proceed?', WWP_PLUGIN_LANG_DOMAIN ); ?>");
 				$("#wpp-dialog-confirm").dialog({
 					resizable: false,
 					height: 140,
 					modal: true,
 					buttons: {
-						"<?php _e('Yes', WWP_PLUGIN_LANG_DOMAIN); ?>": function() {
+						"<?php _e( 'Yes', WWP_PLUGIN_LANG_DOMAIN ); ?>": function() {
 							$("#wpp-dialog-confirm").dialog("close");	
 							codeEditor.setValue(html_val);
 							setDDValues('', '', 'html', '', 'createTxt');
@@ -281,7 +281,7 @@
 							$('#tr-' + lastRowID).css({'background-color' : '#FFFFFF'});
 							lastRowID = 0;
 						},
-						"<?php _e('No', WWP_PLUGIN_LANG_DOMAIN); ?>": function() {
+						"<?php _e( 'No', WWP_PLUGIN_LANG_DOMAIN ); ?>": function() {
 							$("#wpp-dialog-confirm").dialog("close");	
 							return;			
 						}
@@ -301,13 +301,13 @@
 			var this_obj 	= this;
 						
 			if (checkCodeEditorChanges(codeVal)) {
-				$("#wpp-dialog-confirm-body").html("<?php _e('You haven\'t saved your changes, proceed?', WWP_PLUGIN_LANG_DOMAIN); ?>");
+				$("#wpp-dialog-confirm-body").html("<?php _e( 'You haven\'t saved your changes, proceed?', WWP_PLUGIN_LANG_DOMAIN ); ?>");
 				$("#wpp-dialog-confirm").dialog({
 					resizable: false,
 					height: 140,
 					modal: true,
 					buttons: {
-						"<?php _e('Yes', WWP_PLUGIN_LANG_DOMAIN); ?>": function() {
+						"<?php _e( 'Yes', WWP_PLUGIN_LANG_DOMAIN ); ?>": function() {
 							$("#wpp-dialog-confirm").dialog("close");	
 							codeEditor.setValue(css_val);
 							setDDValues('', '', 'css', '', 'createTxt');
@@ -315,7 +315,7 @@
 							$('#tr-' + lastRowID).css({'background-color' : '#FFFFFF'});
 							lastRowID = 0;
 						},
-						"<?php _e('No', WWP_PLUGIN_LANG_DOMAIN); ?>": function() {
+						"<?php _e( 'No', WWP_PLUGIN_LANG_DOMAIN ); ?>": function() {
 							$("#wpp-dialog-confirm").dialog("close");	
 							return;			
 						}
@@ -335,13 +335,13 @@
 			var this_obj 	= this;
 						
 			if (checkCodeEditorChanges(codeVal)) {
-				$("#wpp-dialog-confirm-body").html("<?php _e('You haven\'t saved your changes, proceed?', WWP_PLUGIN_LANG_DOMAIN); ?>");
+				$("#wpp-dialog-confirm-body").html("<?php _e( 'You haven\'t saved your changes, proceed?', WWP_PLUGIN_LANG_DOMAIN ); ?>");
 				$("#wpp-dialog-confirm").dialog({
 					resizable: false,
 					height: 140,
 					modal: true,
 					buttons: {
-						"<?php _e('Yes', WWP_PLUGIN_LANG_DOMAIN); ?>": function() {
+						"<?php _e( 'Yes', WWP_PLUGIN_LANG_DOMAIN ); ?>": function() {
 							$("#wpp-dialog-confirm").dialog("close");	
 							codeEditor.setValue(js_val);
 							setDDValues('', '', 'js', '', 'createTxt');
@@ -349,7 +349,7 @@
 							$('#tr-' + lastRowID).css({'background-color' : '#FFFFFF'});
 							lastRowID = 0;
 						},
-						"<?php _e('No', WWP_PLUGIN_LANG_DOMAIN); ?>": function() {
+						"<?php _e( 'No', WWP_PLUGIN_LANG_DOMAIN ); ?>": function() {
 							$("#wpp-dialog-confirm").dialog("close");	
 							return;			
 						}
@@ -369,13 +369,13 @@
 			var this_obj 	= this;
 						
 			if (checkCodeEditorChanges(codeVal)) {
-				$("#wpp-dialog-confirm-body").html("<?php _e('You haven\'t saved your changes, proceed?', WWP_PLUGIN_LANG_DOMAIN); ?>");
+				$("#wpp-dialog-confirm-body").html("<?php _e( 'You haven\'t saved your changes, proceed?', WWP_PLUGIN_LANG_DOMAIN ); ?>");
 				$("#wpp-dialog-confirm").dialog({
 					resizable: false,
 					height: 140,
 					modal: true,
 					buttons: {
-						"<?php _e('Yes', WWP_PLUGIN_LANG_DOMAIN); ?>": function() {
+						"<?php _e( 'Yes', WWP_PLUGIN_LANG_DOMAIN ); ?>": function() {
 							$("#wpp-dialog-confirm").dialog("close");	
 							codeEditor.setValue(php_val);
 							setDDValues('', '', 'php', '', 'createTxt');
@@ -383,7 +383,7 @@
 							$('#tr-' + lastRowID).css({'background-color' : '#FFFFFF'});
 							lastRowID = 0;
 						},
-						"<?php _e('No', WWP_PLUGIN_LANG_DOMAIN); ?>": function() {
+						"<?php _e( 'No', WWP_PLUGIN_LANG_DOMAIN ); ?>": function() {
 							$("#wpp-dialog-confirm").dialog("close");	
 							return;			
 						}
@@ -406,7 +406,7 @@
 		<thead>
 			<tr>
 				<th><?php echo $titleName; ?></th>
-				<th><?php _e('Control Panel', WWP_PLUGIN_LANG_DOMAIN); ?></th>
+				<th><?php _e( 'Control Panel', WWP_PLUGIN_LANG_DOMAIN ); ?></th>
 			</tr>
 		</thead>
 		<tbody>
@@ -419,17 +419,17 @@
 					<table class="wpp-sub-section-table" style="height: 90%;">
 						<thead>
 							<tr>
-								<th><?php _e('Script Title', WWP_PLUGIN_LANG_DOMAIN); ?></th>
-								<th><center><?php _e('Location', WWP_PLUGIN_LANG_DOMAIN); ?></center></th>
-								<th><center><?php _e('Type', WWP_PLUGIN_LANG_DOMAIN); ?></center></th>
-								<th><center><?php _e('Area', WWP_PLUGIN_LANG_DOMAIN); ?></center></th>
-								<th><center><?php _e('Action', WWP_PLUGIN_LANG_DOMAIN); ?></center></th>
+								<th><?php _e( 'Script Title', WWP_PLUGIN_LANG_DOMAIN ); ?></th>
+								<th><center><?php _e( 'Location', WWP_PLUGIN_LANG_DOMAIN ); ?></center></th>
+								<th><center><?php _e( 'Type', WWP_PLUGIN_LANG_DOMAIN ); ?></center></th>
+								<th><center><?php _e( 'Area', WWP_PLUGIN_LANG_DOMAIN ); ?></center></th>
+								<th><center><?php _e( 'Action', WWP_PLUGIN_LANG_DOMAIN ); ?></center></th>
 							</tr>
 						</thead>
 						<tbody id="bodyScriptList">
 							<tr id="rowNoScripts" style="display: none;">
 								<td colspan="5" class="wpp-cell-center">
-									<?php _e('No Scripts', WWP_PLUGIN_LANG_DOMAIN); ?>
+									<?php _e( 'No Scripts', WWP_PLUGIN_LANG_DOMAIN ); ?>
 								</td>
 							</tr>
 							<tr>
@@ -445,24 +445,24 @@
 			<tr>
 				<td>
 					<div class="wpp-subsection-script-types">
-						<font class="wpp-subsection-create-new"><?php _e('Create new', WWP_PLUGIN_LANG_DOMAIN); ?></font>
-						<?php if (!isset($scriptSetArr['type']['html']) OR $scriptSetArr['type']['html'] == 'true' OR ($isNetworkAdmin AND $isSuperAdmin)): ?>
-							<button class="wpp-btn wpp-btn-sm wpp-btn-danger wpp-btn-scripts btn-load-html" type="button" title="<?php _e('HTML', WWP_PLUGIN_LANG_DOMAIN); ?>">
+						<font class="wpp-subsection-create-new"><?php _e( 'Create new', WWP_PLUGIN_LANG_DOMAIN ); ?></font>
+						<?php if ( ! isset( $scriptSetArr['type']['html'] ) or $scriptSetArr['type']['html'] == 'true' or ( $isNetworkAdmin and $isSuperAdmin ) ) : ?>
+							<button class="wpp-btn wpp-btn-sm wpp-btn-danger wpp-btn-scripts btn-load-html" type="button" title="<?php _e( 'HTML', WWP_PLUGIN_LANG_DOMAIN ); ?>">
 								<i class="whhg-htmlfive"></i>
 							</button>&nbsp;&nbsp;&nbsp;
 						<?php endif; ?>
-						<?php if (!isset($scriptSetArr['type']['css']) OR $scriptSetArr['type']['css'] == 'true' OR ($isNetworkAdmin AND $isSuperAdmin)): ?>
-							<button class="wpp-btn wpp-btn-sm wpp-btn-primary wpp-btn-scripts btn-load-css" type="button" title="<?php _e('CSS', WWP_PLUGIN_LANG_DOMAIN); ?>">
+						<?php if ( ! isset( $scriptSetArr['type']['css'] ) or $scriptSetArr['type']['css'] == 'true' or ( $isNetworkAdmin and $isSuperAdmin ) ) : ?>
+							<button class="wpp-btn wpp-btn-sm wpp-btn-primary wpp-btn-scripts btn-load-css" type="button" title="<?php _e( 'CSS', WWP_PLUGIN_LANG_DOMAIN ); ?>">
 								<i class="whhg-cssthree"></i>
 							</button>&nbsp;&nbsp;&nbsp;
 						<?php endif; ?>
-						<?php if (!isset($scriptSetArr['type']['js']) OR $scriptSetArr['type']['js'] == 'true' OR ($isNetworkAdmin AND $isSuperAdmin)): ?>
-							<button class="wpp-btn wpp-btn-sm wpp-btn-warning wpp-btn-scripts btn-load-js" type="button" title="<?php _e('Javascript', WWP_PLUGIN_LANG_DOMAIN); ?>">
+						<?php if ( ! isset( $scriptSetArr['type']['js'] ) or $scriptSetArr['type']['js'] == 'true' or ( $isNetworkAdmin and $isSuperAdmin ) ) : ?>
+							<button class="wpp-btn wpp-btn-sm wpp-btn-warning wpp-btn-scripts btn-load-js" type="button" title="<?php _e( 'Javascript', WWP_PLUGIN_LANG_DOMAIN ); ?>">
 								<i class="whhg-code"></i>
 							</button>&nbsp;&nbsp;&nbsp;
 						<?php endif; ?>
-						<?php if (!isset($scriptSetArr['type']['php']) OR $scriptSetArr['type']['php'] == 'true' OR ($isNetworkAdmin AND $isSuperAdmin)): ?>
-							<button class="wpp-btn wpp-btn-sm wpp-btn-php wpp-btn-scripts btn-load-php" type="button" title="<?php _e('PHP', WWP_PLUGIN_LANG_DOMAIN); ?>">
+						<?php if ( ! isset( $scriptSetArr['type']['php'] ) or $scriptSetArr['type']['php'] == 'true' or ( $isNetworkAdmin and $isSuperAdmin ) ) : ?>
+							<button class="wpp-btn wpp-btn-sm wpp-btn-php wpp-btn-scripts btn-load-php" type="button" title="<?php _e( 'PHP', WWP_PLUGIN_LANG_DOMAIN ); ?>">
 								<i class="whhg-php"></i>
 							</button>
 						<?php endif; ?>
@@ -479,9 +479,9 @@
 								</td>
 								<td style="border-bottom: 0px;">
 									<select id="wpp-location" name="wpp-location">
-										<option value=""><?php _e('Location', WWP_PLUGIN_LANG_DOMAIN); ?></option>
-										<?php foreach ($locationArr AS $key => $value): ?>
-											<?php if (!isset($scriptSetArr['location'][$key]) OR $scriptSetArr['location'][$key] == 'true' OR ($isNetworkAdmin AND $isSuperAdmin)): ?>
+										<option value=""><?php _e( 'Location', WWP_PLUGIN_LANG_DOMAIN ); ?></option>
+										<?php foreach ( $locationArr as $key => $value ) : ?>
+											<?php if ( ! isset( $scriptSetArr['location'][ $key ] ) or $scriptSetArr['location'][ $key ] == 'true' or ( $isNetworkAdmin and $isSuperAdmin ) ) : ?>
 												<option value="<?php echo $key; ?>"><?php echo $value; ?></option>
 											<?php endif; ?>
 										<?php endforeach; ?>
@@ -489,9 +489,9 @@
 								</td>
 								<td style="border-bottom: 0px;">
 									<select id="wpp-type" name="wpp-type">
-										<option value=""><?php _e('Type', WWP_PLUGIN_LANG_DOMAIN); ?></option>
-										<?php foreach ($typeArr AS $key => $value): ?>
-											<?php if (!isset($scriptSetArr['type'][$key]) OR $scriptSetArr['type'][$key] == 'true' OR ($isNetworkAdmin AND $isSuperAdmin)): ?>
+										<option value=""><?php _e( 'Type', WWP_PLUGIN_LANG_DOMAIN ); ?></option>
+										<?php foreach ( $typeArr as $key => $value ) : ?>
+											<?php if ( ! isset( $scriptSetArr['type'][ $key ] ) or $scriptSetArr['type'][ $key ] == 'true' or ( $isNetworkAdmin and $isSuperAdmin ) ) : ?>
 												<option value="<?php echo $key; ?>"><?php echo $value; ?></option>
 											<?php endif; ?>
 										<?php endforeach; ?>
@@ -499,9 +499,9 @@
 								</td>
 								<td style="border-bottom: 0px;">
 									<select id="wpp-area" name="wpp-area">
-										<option value=""><?php _e('Area', WWP_PLUGIN_LANG_DOMAIN); ?></option>
-										<?php foreach ($areaArr AS $key => $value): ?>
-											<?php if (!isset($scriptSetArr['area'][$key]) OR $scriptSetArr['area'][$key] == 'true' OR ($isNetworkAdmin AND $isSuperAdmin)): ?>
+										<option value=""><?php _e( 'Area', WWP_PLUGIN_LANG_DOMAIN ); ?></option>
+										<?php foreach ( $areaArr as $key => $value ) : ?>
+											<?php if ( ! isset( $scriptSetArr['area'][ $key ] ) or $scriptSetArr['area'][ $key ] == 'true' or ( $isNetworkAdmin and $isSuperAdmin ) ) : ?>
 												<option value="<?php echo $key; ?>"><?php echo $value; ?></option>
 											<?php endif; ?>
 										<?php endforeach; ?>
@@ -509,8 +509,8 @@
 								</td>
 								<td class="wpp-cell-center" style="border-bottom: 0px;">
 									<button class="wpp-btn wpp-btn-sm wpp-btn-primary btn-submit-code" type="button" id="wpp-submit-button" 
-											updateTxt="<?php _e('Update', WWP_PLUGIN_LANG_DOMAIN); ?>" createTxt="<?php _e('Create', WWP_PLUGIN_LANG_DOMAIN); ?>">
-										<?php _e('Create', WWP_PLUGIN_LANG_DOMAIN); ?>
+											updateTxt="<?php _e( 'Update', WWP_PLUGIN_LANG_DOMAIN ); ?>" createTxt="<?php _e( 'Create', WWP_PLUGIN_LANG_DOMAIN ); ?>">
+										<?php _e( 'Create', WWP_PLUGIN_LANG_DOMAIN ); ?>
 									</button>
 								</td>
 							</tr>
@@ -526,7 +526,7 @@
 <h3 class="wpp-section-bottom">
 	<section class="wpp-section-bottom-wrap">
 		<div class="wpp-section-bottom-left">
-			2012-<?php  echo date('Y'); ?> &#64; <a href="https://ecalon.it" target="_new">Ecalon IT LTD.</a> All rights reserved.
+			2012-<?php echo date( 'Y' ); ?> &#64; <a href="https://ecalon.it" target="_new">Ecalon IT LTD.</a> All rights reserved.
 		</div>
 		<div class="wpp-section-bottom-right">
 			 <a href="mailto:info@ecalon.it" target="_new">Report a Bug</a> |  <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5GB537F64NUDE" target="_new">Donate</a>
