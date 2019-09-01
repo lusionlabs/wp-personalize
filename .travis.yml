@@ -3,7 +3,7 @@ dist: trusty
 
 language: php
 php:
-  - 7.1.9
+  - 7.2
 
 notifications:
   email:
@@ -32,6 +32,7 @@ matrix:
     name: PHP Linting
 
 before_script:
+  - composer install
   - export PATH="$HOME/.composer/vendor/bin:$PATH"
   - |
     if [ -f ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini ]; then
