@@ -342,48 +342,45 @@ function wwp_get_allowed_protocols() {
 
 function hookAdminHeadScript() {
 	global $wpAdminHeadScript;
-	$pieces = wp_html_split( trim( $wpAdminHeadScript ) );
 
-	foreach( $pieces as $key => $piece ) {
-		if( $piece === strip_tags( $piece ) ) {
-			echo esc_html( $piece );
-		}
-		echo ( $piece );
-	}
-
-	// var_dump( $thing );
-	// die();
-
-	// //@todo
-	// echo ( $wpAdminHeadScript );
+	//@phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	echo $wpAdminHeadScript;
 
 	hookBodyTopScript();
 }
 function hookHeadScript() {
 	global $wpHeadScript;
 
-	echo esc_html( $wpHeadScript );
+	//@phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	echo $wpHeadScript;
+
 	hookBodyTopScript();
 }
+
 function hookBodyTopScript() {
 	global $wpBodyTopScript;
 
 	$wpBodyTopScript = addslashes( $wpBodyTopScript );
 	$wpBodyTopScript = str_replace( '</', '<\/', $wpBodyTopScript );
 	$wpBodyTopScript = str_replace( array( "\r", "\n" ), '', $wpBodyTopScript );
-
-	$js = wp_unslash( $wpBodyTopScript );
 	?>
-
+	<script type="text/javascript">
+		jQuery(document).ready( function($) {
+			$('body').prepend('<?php echo $wpBodyTopScript; //@phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>');
+		});
+	</script>
 	<?php
 }
+
 function hookAdminBodyFootScript() {
 	global $wpAdminBodyFootScript;
 
-	echo esc_html( $wpAdminBodyFootScript );
+	//@phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	echo $wpAdminBodyFootScript;
 }
 function hookBodyFootScript() {
 	global $wpBodyFootScript;
 
-	echo esc_html( $wpBodyFootScript );
+	//@phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	echo $wpBodyFootScript;
 }
