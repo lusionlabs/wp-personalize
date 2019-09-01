@@ -38,5 +38,5 @@ before_script:
 script:
   - |
     if [[ "$WP_TRAVISCI" == "lint:php" ]] ; then
-      vendor/bin/phpcs --basepath=../ --report-summary .
+      vendor/bin/phpcs --basepath=./ --report-source .
     fi
