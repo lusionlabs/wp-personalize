@@ -37,11 +37,6 @@ THE POSSIBILITIES ARE ENDLESS FOR PERSONALIZING AND CUSTOMIZING YOUR WORDPRESS S
 Please specify and provide as much information as you can to help us debug the problem.
 Also please send us screenshots of any errors you are receiving.
 
-## Contributors & Developers
-
-"WP Personalize" is open source software. The following people have contributed to this plugin.
-* Ecalon IT LTD.
-
 ## Screenshots
 
 1. Single admin settings page
