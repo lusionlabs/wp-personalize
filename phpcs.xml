@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<ruleset name="Lusion Labs WordPress Project Rules">
+
+	<!-- Up the Memory limit for large plugins -->
+	<ini name="memory_limit" value="512M"/>
+
+    <!-- Forget about variable names -->
+	<!-- <rule ref="WordPress-Core" />
+        <exclude name="WordPress.NamingConventions"/>
+	</rule> -->
+
+	<rule ref="WordPress.Security"/>
+
+	<rule ref="WordPress.DB.PreparedSQL"/>
+
+	<!-- <rule ref="WordPress-Docs" /> -->
+
+    <!-- Forget about file names -->
+	<!-- <rule ref="WordPress-Extra">
+		<exclude name="WordPress.Files.FileName"/>
+	</rule> -->
+
+	<!-- Use correct textdomain -->
+	<!-- <rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" value="google-site-kit" />
+		</properties>
+	</rule> -->
+
+	<!-- Show details about violated sniffs -->
+	<arg value="s"/>
+
+	<!-- Iterate over all PHP files by default -->
+	<arg name="extensions" value="php"/>
+	<file>.</file>
+
+	<exclude-pattern>*/phpunit.xml*</exclude-pattern>
+	<exclude-pattern>*/languages/*</exclude-pattern>
+	<exclude-pattern>*/tests/*</exclude-pattern>
+
+	<!-- Third-party code -->
+	<exclude-pattern>*/node_modules/*</exclude-pattern>
+	<exclude-pattern>*/vendor/*</exclude-pattern>
+
+	<!-- Check for cross-version support for PHP 5.4 and higher. -->
+	<config name="testVersion" value="5.4-"/>
+	<rule ref="PHPCompatibility" />
+
+</ruleset>

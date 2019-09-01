@@ -1,5 +1,10 @@
-[![Build Status](https://travis-ci.com/lusionlabs/wp-personalize.svg?branch=develop)](https://travis-ci.com/lusionlabs/wp-personalize)
 # WP Personalize
+
+[![Build Status](https://img.shields.io/travis/lusionlabs/wp-personalize)](https://travis-ci.com/lusionlabs/wp-personalize)
+[![Plugin Version](https://img.shields.io/wordpress/plugin/v/wp-personalize)](https://wordpress.org/plugins/wp-personalize)
+[![WP Required](https://img.shields.io/wordpress/plugin/wp-version/wp-personalize)](https://github.com/lusionlabs/wp-personalize/blob/master/readme.txt)
+[![WP Tested](https://img.shields.io/wordpress/plugin/tested/wp-personalize)](https://wordpress.org/plugins/wp-personalize)
+[![License](https://img.shields.io/github/license/lusionlabs/wp-personalize)](https://github.com/lusionlabs/wp-personalize/blob/master/LICENSE)
 
 ## Description
 
@@ -18,12 +23,12 @@ Personalize and customize your WordPress single site or multisite (the entire ne
 This plugin is for people with some level of knowledge for HTML, CSS, Javascript or PHP.
 
 THE POSSIBILITIES ARE ENDLESS FOR PERSONALIZING AND CUSTOMIZING YOUR WORDPRESS SITE OR MULTISITE:
-Hide Elements: With custom CSS or Javascript (jQuery) you are able to hide HTML elements.
-Style Elements: With custom CSS you are able to override any styling.
-Add Elements: Add HTML elements to the `<head>`, `<body>` or the footer section.
-Control Elements: With custom Javascript (jQuery) you are able to control any HTML element or add further actions on a specific event.
-PHP Code: Implement your own PHP code in the `<head>`, `<body>` or the footer section.
-Much More: Use your imagination.
+* Hide Elements: With custom CSS or Javascript (jQuery) you are able to hide HTML elements.
+* Style Elements: With custom CSS you are able to override any styling.
+* Add Elements: Add HTML elements to the `<head>`, `<body>` or the footer section.
+* Control Elements: With custom Javascript (jQuery) you are able to control any HTML element or add further actions on a specific event.
+* PHP Code: Implement your own PHP code in the `<head>`, `<body>` or the footer section.
+* Much More: Use your imagination.
 
 
 ## FAQ
@@ -31,11 +36,6 @@ Much More: Use your imagination.
 
 Please specify and provide as much information as you can to help us debug the problem.
 Also please send us screenshots of any errors you are receiving.
-
-## Contributors & Developers
-
-"WP Personalize" is open source software. The following people have contributed to this plugin.
-* Ecalon IT LTD.
 
 ## Screenshots
 

@@ -1,12 +1,13 @@
 === WP Personalize ===
-Contributors: Ecalon IT LTD.
-Donate Link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5GB537F64NUDE
-Tags: personalize,custom,html,js,javascript,css,php,multisite,single,site
-Requires at least: 3.0
-Tested up to: 4.2.1
-Stable tag: 2.1.0
+Contributors: lusionlabs
+Donate link: https://lusionlabs.com/
+Tags: personalize, custom, html, js, javascript, css, php, multisite, single, site
+Requires at least: 4.5
+Tested up to: 5.2
+Requires PHP: 5.6
+Stable tag: trunk
 License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
@@ -21,7 +22,7 @@ Personalize and customize your WordPress single site or multisite (the entire ne
 This plugin is for people with some level of knowledge for HTML, CSS, Javascript or PHP.
 
 = The possibilities are endless for personalizing and customizing your WordPress site or multisite: =
-* **Hide Elements:** With custom CSS or Javascript (jQuery) you are able to hide HTML elements.
+* **Hide Elements: With custom CSS or Javascript (jQuery) you are able to hide HTML elements.
 * **Style Elements:** With custom CSS you are able to override any styling.
 * **Add Elements:** Add HTML elements to the '&#60;head&#62;', '&#60;body&#62; or the footer section.
 * **Control Elements:** With custom Javascript (jQuery) you are able to control any HTML element or add further actions on a specific event.
@@ -38,10 +39,19 @@ This plugin is for people with some level of knowledge for HTML, CSS, Javascript
 
 = Plugin doesn't work =
 
-Please specify and provide as much information as you can to help us debug the problem. 
+Please specify and provide as much information as you can to help us debug the problem.
 Also please send us screenshots of any errors you are receiving.
 
 == Changelog ==
+
+= 2.2.0 =
+* Adds modern build tools and TravisCI integration.
+* Applies all automatically fixable sniffs from the WordPress Coding Standards.
+* Updates documentation.
+* Includes license file for GPL 2.0.
+* Resolves internal line endings on two files.
+* Improves security by applying best practices for data escaping and sanitization.
+* Improves security by requiring nonce validation on all Admin AJAX requests.
 
 = 2.1.0 =
 * Fixed minor bugs.
