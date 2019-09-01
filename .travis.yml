@@ -34,18 +34,19 @@ matrix:
 before_script:
   - composer install
   - export PATH="$HOME/.composer/vendor/bin:$PATH"
-  - |
-    if [ -f ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini ]; then
-      phpenv config-rm xdebug.ini
-    else
-      echo "xdebug.ini does not exist"
-    fi
-  - |
-    if [[ "$WP_TRAVISCI" == "lint:php" ]] ; then
-      composer global require "squizlabs/php_codesniffer=*,wp-coding-standards/wpcs=*,phpcompatibility/php-compatibility=*"
-      phpcs --config-set installed_paths $HOME/.composer/vendor/wp-coding-standards/wpcs,$HOME/.composer/vendor/phpcompatibility/php-compatibility
-      phpcs --version
-    fi
+  - which phpcs
+  # - |
+  #   if [ -f ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini ]; then
+  #     phpenv config-rm xdebug.ini
+  #   else
+  #     echo "xdebug.ini does not exist"
+  #   fi
+  # - |
+  #   if [[ "$WP_TRAVISCI" == "lint:php" ]] ; then
+  #     composer global require "squizlabs/php_codesniffer=*,wp-coding-standards/wpcs=*,phpcompatibility/php-compatibility=*"
+  #     phpcs --config-set installed_paths $HOME/.composer/vendor/wp-coding-standards/wpcs,$HOME/.composer/vendor/phpcompatibility/php-compatibility
+  #     phpcs --version
+  #   fi
 
 script:
   - |
