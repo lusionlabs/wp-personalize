@@ -4,7 +4,7 @@ $titleName        = WWP_PLUGIN_TITLE_NAME;
 $createNetworkTxt = '';
 ?>
 
-<div id="wpp-dialog-confirm" title="<?php _e( 'Info', WWP_PLUGIN_LANG_DOMAIN ); ?>" style="display: none;">
+<div id="wpp-dialog-confirm" title="<?php esc_html_e( 'Info', WWP_PLUGIN_LANG_DOMAIN ); ?>" style="display: none;">
   <p>
 	  <span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>
 	  <div id="wpp-dialog-confirm-body"></div>

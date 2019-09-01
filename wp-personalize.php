@@ -119,7 +119,7 @@ function wppAddNetworkOptionsPage() {
 }
 function wppOptionsPage() {
 	if ( ! current_user_can( 'manage_options' ) ) {
-		wp_die( _e( 'You do not have sufficient permissions to access this page.' ) );
+		wp_die( esc_html_e( 'You do not have sufficient permissions to access this page.' ) );
 	}
 
 	global $isNetworkAdmin, $isSuperAdmin, $scriptSiteArr, $scriptSetArr, $locationArr, $typeArr, $areaArr;
@@ -127,7 +127,7 @@ function wppOptionsPage() {
 }
 function wppNetworkOptionsPage() {
 	if ( ! current_user_can( 'manage_network_options' ) ) {
-		wp_die( _e( 'You do not have sufficient permissions to access this page.' ) );
+		wp_die( esc_html_e( 'You do not have sufficient permissions to access this page.' ) );
 	}
 
 	global $isNetworkAdmin, $isSuperAdmin, $scriptNetArr, $scriptSetArr, $locationArr, $typeArr, $areaArr;
