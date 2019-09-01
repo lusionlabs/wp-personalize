@@ -52,7 +52,7 @@ register_deactivation_hook( __FILE__, 'wppDeactivation' );
 add_action( 'plugins_loaded', 'checkIsSuperAdmin' );
 
 // Admin script and styles
-add_action( 'admin_enqueue_scripts', 'wppLoadScriptsStyles' );
+add_action( 'adminesc_html_enqueue_scripts', 'wppLoadScriptsStyles' );
 
 // Load Scripts
 $wpHeadScript          = '';
@@ -106,11 +106,11 @@ function wppLoadScriptsStyles() {
 	wp_register_style( WWP_PLUGIN_NAME . '-whhg', plugins_url( '/css/whhg.css', __FILE__ ) );
 	wp_register_style( WWP_PLUGIN_NAME . '-jquery-ui', plugins_url( '/css/jquery-ui.css', __FILE__ ) );
 
-	wp_enqueue_script( WWP_PLUGIN_NAME . '-admin' );
-	wp_enqueue_script( WWP_PLUGIN_NAME . '-blockUI' );
-	wp_enqueue_style( WWP_PLUGIN_NAME . '-admin' );
-	wp_enqueue_style( WWP_PLUGIN_NAME . '-whhg' );
-	wp_enqueue_style( WWP_PLUGIN_NAME . '-jquery-ui' );
+	wpesc_html_enqueue_script( WWP_PLUGIN_NAME . '-admin' );
+	wpesc_html_enqueue_script( WWP_PLUGIN_NAME . '-blockUI' );
+	wpesc_html_enqueue_style( WWP_PLUGIN_NAME . '-admin' );
+	wpesc_html_enqueue_style( WWP_PLUGIN_NAME . '-whhg' );
+	wpesc_html_enqueue_style( WWP_PLUGIN_NAME . '-jquery-ui' );
 }
 
 function wppActivation() {
@@ -134,7 +134,7 @@ function wppAddNetworkOptionsPage() {
 
 function wppOptionsPage() {
 	if ( ! current_user_can( 'manage_options' ) ) {
-		wp_die( _e( 'You do not have sufficient permissions to access this page.' ) );
+		wp_die( esc_html_e( 'You do not have sufficient permissions to access this page.' ) );
 	}
 
 	global $isNetworkAdmin, $isSuperAdmin, $scriptSiteArr, $scriptSetArr, $locationArr, $typeArr, $areaArr;
@@ -143,7 +143,7 @@ function wppOptionsPage() {
 
 function wppNetworkOptionsPage() {
 	if ( ! current_user_can( 'manage_network_options' ) ) {
-		wp_die( _e( 'You do not have sufficient permissions to access this page.' ) );
+		wp_die( esc_html_e( 'You do not have sufficient permissions to access this page.' ) );
 	}
 
 	global $isNetworkAdmin, $isSuperAdmin, $scriptNetArr, $scriptSetArr, $locationArr, $typeArr, $areaArr;
@@ -162,10 +162,10 @@ function wppLoadList() {
 
 	if ( $isSuperAdmin and $isNetworkAdmin ) {
 		$scriptNetArr = get_site_option( 'wp_personalize_script_net_arr', array() );
-		echo json_encode( $scriptNetArr );
+		echo jsonesc_html_encode( $scriptNetArr );
 	} else {
 		$scriptSiteArr = get_option( 'wp_personalize_script_arr', array() );
-		echo json_encode( $scriptSiteArr );
+		echo jsonesc_html_encode( $scriptSiteArr );
 	}
 
 	die();
@@ -197,9 +197,9 @@ function wppUpdateScript() {
 	}//end if
 
 	if ( $result ) {
-		echo json_encode( array( 'result' => 'true' ) );
+		echo jsonesc_html_encode( array( 'result' => 'true' ) );
 	} else {
-		echo json_encode( array( 'result' => 'false' ) );
+		echo jsonesc_html_encode( array( 'result' => 'false' ) );
 	}
 
 	die();
@@ -219,9 +219,9 @@ function wppUpdateSettings() {
 	}
 
 	if ( $result ) {
-		echo json_encode( array( 'result' => 'true' ) );
+		echo jsonesc_html_encode( array( 'result' => 'true' ) );
 	} else {
-		echo json_encode( array( 'result' => 'false' ) );
+		echo jsonesc_html_encode( array( 'result' => 'false' ) );
 	}
 
 	die();
@@ -237,7 +237,7 @@ function wppLoadScript() {
 	}
 
 	$scriptArr[ trim( $_POST['title'] ) ]['code'] = stripslashes( $scriptArr[ trim( $_POST['title'] ) ]['code'] );
-	echo json_encode( $scriptArr[ trim( $_POST['title'] ) ] );
+	echo jsonesc_html_encode( $scriptArr[ trim( $_POST['title'] ) ] );
 
 	die();
 }
@@ -254,9 +254,9 @@ function wppDeleteScript() {
 	}
 
 	if ( $result ) {
-		echo json_encode( array( 'result' => 'true' ) );
+		echo jsonesc_html_encode( array( 'result' => 'true' ) );
 	} else {
-		echo json_encode( array( 'result' => 'false' ) );
+		echo jsonesc_html_encode( array( 'result' => 'false' ) );
 	}
 
 	die();
