@@ -4,8 +4,6 @@
 [![Required Version](https://img.shields.io/wordpress/plugin/wp-version/wp-personalize?label=requires+wp)](https://github.com/lusionlabs/wp-personalize/blob/master/readme.txt)
 [![License](https://img.shields.io/github/license/lusionlabs/wp-present)](https://github.com/lusionlabs/wp-personalize/blob/master/LICENSE)
 
-
-![WordPress Plugin: Required WP Version](https://img.shields.io/wordpress/plugin/wp-version/wp-personalize?label=requires)
 # WP Personalize
 
 ## Description
