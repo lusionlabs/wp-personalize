@@ -1,4 +1,4 @@
-[![Lusion Status](https://img.shields.io/badge/lusion-labs-7FFFD4)](https:lusionlabs.com/)
+[![Lusion Status](https://img.shields.io/badge/lusion-labs-007fff)](https:lusionlabs.com/)
 [![License](https://img.shields.io/github/license/lusionlabs/wp-present)](https://github.com/lusionlabs/wp-personalize/blob/develop/LICENSE)
 [![Build Status](https://travis-ci.com/lusionlabs/wp-personalize.svg?branch=develop)](https://travis-ci.com/lusionlabs/wp-personalize)
 # WP Personalize
