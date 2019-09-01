@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/lusionlabs/wp-personalize.svg?branch=develop)](https://travis-ci.com/lusionlabs/wp-personalize)
+[![Build Status](https://img.shields.io/travis/lusionlabs/wp-personalize)](https://travis-ci.com/lusionlabs/wp-personalize)
 [![Plugin Version](https://img.shields.io/wordpress/plugin/v/wp-personalize)](https://wordpress.org/plugins/wp-personalize)
 [![Tested Version](https://img.shields.io/wordpress/plugin/tested/wp-personalize)](https://wordpress.org/plugins/wp-personalize)
 [![Required Version](https://img.shields.io/wordpress/plugin/wp-version/wp-personalize)](https://github.com/lusionlabs/wp-personalize/blob/master/readme.txt)
