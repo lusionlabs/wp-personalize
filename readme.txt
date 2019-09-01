@@ -22,7 +22,7 @@ Personalize and customize your WordPress single site or multisite (the entire ne
 This plugin is for people with some level of knowledge for HTML, CSS, Javascript or PHP.
 
 = The possibilities are endless for personalizing and customizing your WordPress site or multisite: =
-* **Hide Elements:** With custom CSS or Javascript (jQuery) you are able to hide HTML elements.
+* **Hide Elements: With custom CSS or Javascript (jQuery) you are able to hide HTML elements.
 * **Style Elements:** With custom CSS you are able to override any styling.
 * **Add Elements:** Add HTML elements to the '&#60;head&#62;', '&#60;body&#62; or the footer section.
 * **Control Elements:** With custom Javascript (jQuery) you are able to control any HTML element or add further actions on a specific event.
