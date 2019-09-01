@@ -2,6 +2,8 @@ sudo: false
 dist: trusty
 
 language: php
+php:
+  - 7.0
 
 notifications:
   email:
@@ -17,44 +19,24 @@ cache:
   directories:
     - $HOME/.composer/cache
 
+env:
+  global:
+    - LOCAL_DIR: build
+    - COMPOSER_INSTALL: true
+    - NPM_INSTALL: false
+    - WP_INSTALL: false
+
 matrix:
   include:
-    # - php: 5.6
-    #   env: WP_VERSION=latest WP_MULTISITE=0 WP_TRAVISCI=travis:phpunit
-    # - php: 7.2
-    #   env: WP_VERSION=latest WP_MULTISITE=1 WP_TRAVISCI=phpcs
-    # - php: 5.6
-    #   env: WP_TRAVISCI=travis:js-tests
-    - php: 7.1
-      env: WP_VERSION=latest WP_MULTISITE=0 WP_TRAVISCI=phpcs
+  - env:  WP_TRAVISCI=lint:php COMPOSER_INSTALL=true NPM_INSTALL=false WP_INSTALL=false
+    name: PHP Linting
 
 before_script:
+  - composer install
   - export PATH="$HOME/.composer/vendor/bin:$PATH"
-  - |
-    if [ -f ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini ]; then
-      phpenv config-rm xdebug.ini
-    else
-      echo "xdebug.ini does not exist"
-    fi
-  - |
-    if [[ ! -z "$WP_VERSION" ]] ; then
-      bash bin/install-wp-tests.sh wordpress_test root '' localhost $WP_VERSION
-      composer global require "phpunit/phpunit=4.8.*|5.7.*"
-    fi
-  - |
-    if [[ "$WP_TRAVISCI" == "phpcs" ]] ; then
-      composer global require wp-coding-standards/wpcs
-      composer global require phpcompatibility/php-compatibility
-      phpcs --config-set installed_paths $HOME/.composer/vendor/wp-coding-standards/wpcs, $HOME/.composer/vendor/phpcompatibility/php-compatibility
-    fi
 
 script:
   - |
-    if [[ ! -z "$WP_VERSION" ]] ; then
-      phpunit
-      WP_MULTISITE=1 phpunit
-    fi
-  - |
-    if [[ "$WP_TRAVISCI" == "phpcs" ]] ; then
-      phpcs --show-config
+    if [[ "$WP_TRAVISCI" == "lint:php" ]] ; then
+      vendor/bin/phpcs --basepath=../ --report-summary .
     fi
