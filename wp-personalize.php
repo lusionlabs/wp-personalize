@@ -12,13 +12,6 @@
  * @package         WP_Personalize
  */
 
-/**
- * @package   WP Personalize
- * @author    Lusion Labs
- * @version   2.1.0
- * @copyright Lusion Labs
- */
-
 // Constants
 define( 'WWP_PLUGIN_VERSION', '2.0.0' );
 define( 'WWP_PLUGIN_NAME', 'wp-personalize' );

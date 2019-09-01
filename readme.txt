@@ -44,6 +44,15 @@ Also please send us screenshots of any errors you are receiving.
 
 == Changelog ==
 
+= 2.2.0 =
+* Adds modern build tools and TravisCI integration.
+* Applies all automatically fixable sniffs from the WordPress Coding Standards.
+* Updates documentation.
+* Includes license file for GPL 2.0.
+* Resolves internal line endings on two files.
+* Improves security by applying best practices for data escaping and sanitization.
+* Improves security by requiring nonce validation on all Admin AJAX requests.
+
 = 2.1.0 =
 * Fixed minor bugs.
 
