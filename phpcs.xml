@@ -9,9 +9,9 @@
         <exclude name="WordPress.NamingConventions"/>
 	</rule> -->
 
-	<!-- <rule ref="WordPress.Security"/>
+	<rule ref="WordPress.Security"/>
 
-	<rule ref="WordPress.DB.PreparedSQL"/> -->
+	<rule ref="WordPress.DB.PreparedSQL"/>
 
 	<!-- <rule ref="WordPress-Docs" /> -->
 
