@@ -64,7 +64,7 @@ $createNetworkTxt = '(' . __( 'Network', WWP_PLUGIN_LANG_DOMAIN ) . ')';
 			</tr>
 			<tr>
 				<td>
-					
+
 				</td>
 				<td>
 					<button class="wpp-btn wpp-btn-sm wpp-btn-primary btn-update-settings" type="button" id="wpp-update-settings">
