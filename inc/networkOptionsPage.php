@@ -1,14 +1,14 @@
-<?php
-$displayName      = WWP_PLUGIN_DISPLAY_NAME;
-$titleName        = WWP_PLUGIN_TITLE_NAME . ' (' . __( 'Network', WWP_PLUGIN_LANG_DOMAIN ) . ')';
-$titleSetName     = WWP_PLUGIN_TITLE_NAME . ' (' . __( 'Single Site Settings', WWP_PLUGIN_LANG_DOMAIN ) . ')';
-$createNetworkTxt = '(' . __( 'Network', WWP_PLUGIN_LANG_DOMAIN ) . ')';
+<?php 
+$displayName 			= WWP_PLUGIN_DISPLAY_NAME;
+$titleName 				= WWP_PLUGIN_TITLE_NAME . " (" . __('Network', WWP_PLUGIN_LANG_DOMAIN) . ")";
+$titleSetName			= WWP_PLUGIN_TITLE_NAME . " (" . __('Single Site Settings', WWP_PLUGIN_LANG_DOMAIN) . ")";
+$createNetworkTxt = "(" . __('Network', WWP_PLUGIN_LANG_DOMAIN) . ")";
 ?>
 
-<div id="wpp-dialog-confirm" title="<?php esc_html_e( 'Info', WWP_PLUGIN_LANG_DOMAIN ); ?>" style="display: none;">
+<div id="wpp-dialog-confirm" title="<?php _e('Info', WWP_PLUGIN_LANG_DOMAIN); ?>" style="display: none;">
   <p>
-	  <span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>
-	  <div id="wpp-dialog-confirm-body"></div>
+  	<span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>
+  	<div id="wpp-dialog-confirm-body"></div>
   </p>
 </div>
 
@@ -22,17 +22,17 @@ $createNetworkTxt = '(' . __( 'Network', WWP_PLUGIN_LANG_DOMAIN ) . ')';
 		<thead>
 			<tr>
 				<th><?php echo $titleSetName; ?></th>
-				<th><?php esc_html_e( 'Settings', WWP_PLUGIN_LANG_DOMAIN ); ?></th>
+				<th><?php _e('Settings', WWP_PLUGIN_LANG_DOMAIN); ?></th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr>
 				<td>
-					<?php esc_html_e( 'Locations Choosable', WWP_PLUGIN_LANG_DOMAIN ); ?>
+					<?php _e('Locations Choosable', WWP_PLUGIN_LANG_DOMAIN); ?>
 				</td>
 				<td>
-					<?php foreach ( $locationArr as $key => $value ) : ?>
-						<?php $locationChecked = ( ! isset( $scriptSetArr['location'][ $key ] ) or $scriptSetArr['location'][ $key ] == 'true' ) ? ' checked' : ''; ?>
+					<?php foreach ($locationArr AS $key => $value): ?>
+						<?php $locationChecked = (!isset($scriptSetArr['location'][$key]) OR $scriptSetArr['location'][$key] == 'true')? ' checked' : ''; ?>
 						<input name="loccaion[]" class="check-location" type="checkbox" value="<?php echo $key; ?>"<?php echo $locationChecked; ?> />
 						<?php echo $value; ?><br/>
 					<?php endforeach; ?>
@@ -40,11 +40,11 @@ $createNetworkTxt = '(' . __( 'Network', WWP_PLUGIN_LANG_DOMAIN ) . ')';
 			</tr>
 			<tr>
 				<td>
-					<?php esc_html_e( 'Types Choosable', WWP_PLUGIN_LANG_DOMAIN ); ?>
+					<?php _e('Types Choosable', WWP_PLUGIN_LANG_DOMAIN); ?>
 				</td>
 				<td>
-					<?php foreach ( $typeArr as $key => $value ) : ?>
-						<?php $typeChecked = ( ! isset( $scriptSetArr['type'][ $key ] ) or $scriptSetArr['type'][ $key ] == 'true' ) ? ' checked' : ''; ?>
+					<?php foreach ($typeArr AS $key => $value): ?>
+					<?php $typeChecked = (!isset($scriptSetArr['type'][$key]) OR $scriptSetArr['type'][$key] == 'true')? ' checked' : ''; ?>
 						<input name="type[]" class="check-type" type="checkbox" value="<?php echo $key; ?>"<?php echo $typeChecked; ?> />
 						<?php echo $value; ?><br/>
 					<?php endforeach; ?>
@@ -52,11 +52,11 @@ $createNetworkTxt = '(' . __( 'Network', WWP_PLUGIN_LANG_DOMAIN ) . ')';
 			</tr>
 			<tr>
 				<td>
-					<?php esc_html_e( 'Areas Choosable', WWP_PLUGIN_LANG_DOMAIN ); ?>
+					<?php _e('Areas Choosable', WWP_PLUGIN_LANG_DOMAIN); ?>
 				</td>
 				<td>
-					<?php foreach ( $areaArr as $key => $value ) : ?>
-						<?php $areaChecked = ( ! isset( $scriptSetArr['area'][ $key ] ) or $scriptSetArr['area'][ $key ] == 'true' ) ? ' checked' : ''; ?>
+					<?php foreach ($areaArr AS $key => $value): ?>
+					<?php $areaChecked = (!isset($scriptSetArr['area'][$key]) OR $scriptSetArr['area'][$key] == 'true')? ' checked' : ''; ?>
 						<input name="area[]" class="check-area" type="checkbox" value="<?php echo $key; ?>"<?php echo $areaChecked; ?> />
 						<?php echo $value; ?><br/>
 					<?php endforeach; ?>
@@ -64,11 +64,11 @@ $createNetworkTxt = '(' . __( 'Network', WWP_PLUGIN_LANG_DOMAIN ) . ')';
 			</tr>
 			<tr>
 				<td>
-
+					
 				</td>
 				<td>
 					<button class="wpp-btn wpp-btn-sm wpp-btn-primary btn-update-settings" type="button" id="wpp-update-settings">
-						<?php esc_html_e( 'Update', WWP_PLUGIN_LANG_DOMAIN ); ?>
+						<?php _e('Update', WWP_PLUGIN_LANG_DOMAIN); ?>
 					</button>
 				</td>
 			</tr>
@@ -76,6 +76,6 @@ $createNetworkTxt = '(' . __( 'Network', WWP_PLUGIN_LANG_DOMAIN ) . ')';
 	</table>
 </div>
 
-<?php
-require_once 'wpPersonlizeEditor.php';
+<?php 
+include_once('wpPersonlizeEditor.php'); 
 ?>
