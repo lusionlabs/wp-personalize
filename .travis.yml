@@ -41,7 +41,7 @@ before_script:
     fi
   - |
     if [[ "$WP_TRAVISCI" == "lint:php" ]] ; then
-      composer global require "squizlabs/php_codesniffer,wp-coding-standards/wpcs,phpcompatibility/php-compatibility"
+      composer global require "squizlabs/php_codesniffer=*,wp-coding-standards/wpcs,phpcompatibility/php-compatibility"
       phpcs --config-set installed_paths $HOME/.composer/vendor/wp-coding-standards/wpcs,$HOME/.composer/vendor/phpcompatibility/php-compatibility
       phpcs --version
     fi
