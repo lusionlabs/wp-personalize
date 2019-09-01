@@ -5,7 +5,10 @@
 [![WP Required](https://img.shields.io/wordpress/plugin/wp-version/wp-personalize)](https://github.com/lusionlabs/wp-personalize/blob/master/readme.txt)
 [![WP Tested](https://img.shields.io/wordpress/plugin/tested/wp-personalize)](https://wordpress.org/plugins/wp-personalize)
 [![License](https://img.shields.io/github/license/lusionlabs/wp-personalize)](https://github.com/lusionlabs/wp-personalize/blob/master/LICENSE)
+
+
 [![Build Status](https://img.shields.io/travis/lusionlabs/wp-personalize)](https://travis-ci.com/lusionlabs/wp-personalize)
+[![Code Coverage](https://img.shields.io/coveralls/github/lusionlabs/wp-personalize)](https://travis-ci.com/lusionlabs/wp-personalize)
 
 ## Description
 
