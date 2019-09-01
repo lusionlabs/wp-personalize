@@ -15,4 +15,4 @@ node_modules/
 
 # Custom
 debug.log
-report*.txt
+report*
